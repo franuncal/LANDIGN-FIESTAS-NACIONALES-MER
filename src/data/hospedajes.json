@@ -1,0 +1,17 @@
+[
+    {
+        "nombre": "Hotel Mercedes",
+        "descripcion": "Confort y servicio en el centro de la ciudad.",
+        "link": "https://hotelmercedes.com.ar"
+    },
+    {
+        "nombre": "Cabañas La Armonía",
+        "descripcion": "Cabañas rodeadas de naturaleza y tranquilidad.",
+        "link": "https://cabanaslaarmonia.com"
+    },
+    {
+        "nombre": "Hostel Ruta 5",
+        "descripcion": "Ideal para jóvenes viajeros, a pasos de la estación.",
+        "link": "https://hostelruta5.com"
+    }
+]

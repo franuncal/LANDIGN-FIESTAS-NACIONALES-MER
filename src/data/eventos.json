@@ -1,0 +1,73 @@
+[
+    {
+        "id": 1,
+        "nombre": "Fiesta de la Torta Frita",
+        "fecha": "2025-05-10T00:00:00",
+        "banner": "../assets/img-TF/TF5.JPG",
+        "colorPrimario": "#F29222",
+        "colorSecundario": "#F29222",
+        "historia": {
+            "descripcion": "La Fiesta Nacional de la Torta Frita celebra la tradición culinaria de Mercedes con eventos, música en vivo y la preparación de la torta frita más grande del mundo.",
+            "imagen": "../assets/img-TF/TF2.JPG",
+            "colorSecundario": "#0F526F"
+        },
+        "actividades": [
+            {
+                "nombre": "Apertura Oficial",
+                "descripcion": "Inicio de la fiesta con autoridades y artistas locales.",
+                "fecha": "2025-05-10T18:00:00"
+            },
+            {
+                "nombre": "Show de Música Folklórica",
+                "descripcion": "Concierto en vivo con bandas invitadas.",
+                "fecha": "2025-05-10T20:30:00"
+            },
+            {
+                "nombre": "Concurso de Torta Frita",
+                "descripcion": "Competencia abierta al público para la mejor torta frita.",
+                "fecha": "2025-05-10T16:00:00"
+            },
+            {
+                "nombre": "Preparación de la Torta Frita más grande del mundo",
+                "descripcion": "Gran desafío de la torta frita más grande. ¡No te lo pierdas!",
+                "fecha": "2025-05-10T14:00:00"
+            },
+            {
+                "nombre": "Espectáculo de Danzas Tradicionales",
+                "descripcion": "Muestra de danzas típicas de la región.",
+                "fecha": "2025-05-11T17:00:00"
+            },
+            {
+                "nombre": "Espectáculo de Danzas Tradicionales",
+                "descripcion": "Muestra de danzas típicas de la región.",
+                "fecha": "2025-05-11T17:00:00"
+            },
+            {
+                "nombre": "Cierre Musical",
+                "descripcion": "Gran cierre con banda sorpresa.",
+                "fecha": "2025-05-11T20:00:00"
+            },
+            {
+                "nombre": "Cierre Musical",
+                "descripcion": "Gran cierre con banda sorpresa.",
+                "fecha": "2025-05-11T20:00:00"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "nombre": "Fiesta del Salame Quintero",
+        "fecha": "2025-06-15T00:00:00",
+        "banner": "ruta/a/imagen2.jpg",
+        "colorPrimario": "#9B2226",
+        "colorSecundario": "#AE2012"
+    },
+    {
+        "id": 3,
+        "nombre": "Festival de Cerveceros Mercedinos",
+        "fecha": "2025-08-15T00:00:00",
+        "banner": "ruta/a/imagen2.jpg",
+        "colorPrimario": "#9B2226",
+        "colorSecundario": "#AE2012"
+    }
+]

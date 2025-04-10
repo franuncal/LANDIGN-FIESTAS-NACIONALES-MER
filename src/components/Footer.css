@@ -1,0 +1,104 @@
+.footer {
+  background-color: #0f4860;
+  color: #cccccc;
+  padding: 1.5rem 1rem; /* 🔥 Menos padding */
+}
+
+.footer-contenedor {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* 🔥 Menos separación entre Contacto y Redes */
+  align-items: center;
+  text-align: center;
+}
+
+.footer-logo {
+  margin: 1rem 0; /* 🔥 Menos margen arriba y abajo del logo */
+  display: flex;
+  justify-content: center;
+}
+
+.footer-logo-imagen {
+  height: 70px; /* 🔥 Un pelín más chico */
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.footer-logo-imagen:hover {
+  transform: scale(1.05);
+}
+
+.footer-seccion {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem; /* 🔥 Menos separación entre items */
+  justify-content: center;
+  align-items: center;
+  min-height: 180px; /* 🔥 Menor altura mínima */
+}
+
+.footer-titulo {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem; /* 🔥 Menos margen */
+}
+
+.footer-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  font-size: 0.95rem;
+}
+
+.footer-redes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.4rem;
+}
+
+.footer-icono {
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.footer-icono:hover {
+  color: #f29222;
+}
+
+.footer-copy {
+  margin-top: 1.5rem; /* 🔥 Menos espacio arriba del copy */
+  padding-top: 1rem;
+  text-align: center;
+  font-size: 0.8rem; /* 🔥 Un poco más chico */
+  color: #cccccc;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* 🔥 Responsive - Desktop */
+@media (min-width: 768px) {
+  .footer-contenedor {
+    flex-direction: row;
+    justify-content: center;
+    gap: 4rem; /* 🔥 Menos gap entre columnas */
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-item {
+    justify-content: center;
+  }
+
+  .footer-seccion {
+    flex: 1;
+    min-height: 180px; /* 🔥 Misma altura menor en desktop */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

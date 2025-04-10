@@ -1,0 +1,122 @@
+.header {
+  background-color: #222222;
+  padding: 12px 0; /* 🔥 Menos padding */
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-imagen {
+  height: 80px; /* 🔥 Más chico y prolijo */
+  width: auto;
+  object-fit: contain; /* Mejor que cover en logos */
+}
+
+.nav {
+  display: flex;
+}
+
+.nav-list {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-list li a {
+  color: white;
+  font-size: 16px;
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+.nav-list li a:hover {
+  color: #f29222;
+}
+
+/* Botón hamburguesa */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 150;
+}
+
+.menu-toggle .barra {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+/* Cuando el menú está abierto */
+.menu-toggle.open .barra:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.open .barra:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open .barra:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* 🔥 Responsive Header */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    flex-direction: column;
+    background: rgba(15, 82, 111, 0.7); /* Glassmorphism */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    text-align: center;
+    align-items: center;
+    transition: max-height 0.5s ease-out;
+  }
+
+  .nav.activo {
+    max-height: 1000px;
+    transition: max-height 0.5s ease-in;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    padding: 1rem 0;
+    align-items: center;
+  }
+
+  .nav-list li {
+    margin: 0.5rem 0;
+  }
+
+  /* 🔥 Reduzco también el logo en mobile */
+  .logo-imagen {
+    height: 70px;
+  }
+}

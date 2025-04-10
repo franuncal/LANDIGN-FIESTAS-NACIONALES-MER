@@ -1,0 +1,192 @@
+.cronograma {
+  padding: 4rem 1rem;
+  background-color: #f9fafb;
+}
+
+.cronograma-contenedor {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  text-align: center; /* 🔥 AGREGAR ESTO */
+}
+
+.cronograma-titulo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  background-color: #f29222;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+}
+
+.cronograma-titulo .resaltado {
+  background-color: white;
+  color: #f29222;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3rem;
+}
+
+/* Día */
+.cronograma-dia {
+  margin-bottom: 2.5rem;
+}
+
+.cronograma-dia-titulo {
+  font-size: 1.8rem;
+  color: #f29222; /* Naranja */
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Lista de actividades */
+.cronograma-lista {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .cronograma-lista {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+.cronograma-item {
+  background-color: rgba(15, 82, 111);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  text-align: center; /* Mejor alineación en mobile */
+}
+
+.cronograma-item:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.cronograma-item-titulo {
+  font-size: 1.3rem; /* Más chico para mobile */
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #f9fafb;
+}
+
+.cronograma-item-descripcion {
+  color: white;
+  font-size: 0.95rem; /* Más chico para mobile */
+}
+
+/* Evento estelar */
+.evento-estelar {
+  text-align: center;
+  margin-top: 4rem;
+  background-color: #f29222;
+  color: white;
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.evento-estelar-titulo {
+  font-size: 1.6rem;
+  font-weight: 550;
+  margin-bottom: 1rem;
+}
+
+.evento-estelar-descripcion {
+  font-size: 1.8rem;
+  font-weight: bolder;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.cronograma-entradas {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.boton-entradas {
+  display: inline-flex; /* 🔥 inline-flex para alinear ícono y texto */
+  align-items: center;
+  justify-content: center;
+  background-color: #f29222; /* Naranja */
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  animation: pulse 2s infinite; /* 🔥 Botón pulsando */
+}
+
+.boton-entradas:hover {
+  background-color: #d97800;
+  transform: scale(1.05);
+}
+
+.icono-ticket {
+  margin-right: 0.5rem;
+  font-size: 1.8rem;
+  vertical-align: middle;
+  animation: pulse-icon 2s infinite; /* 🔥 Ícono también pulsando */
+}
+
+/* 🔥 Animación de pulse para el botón */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(242, 146, 34, 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 15px rgba(242, 146, 34, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(242, 146, 34, 0);
+  }
+}
+
+/* 🔥 Animación de pulse para el ícono */
+@keyframes pulse-icon {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2); /* Ícono agranda y achica */
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Ajustes extra para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .cronograma-titulo {
+    font-size: 1.5rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .cronograma-dia-titulo {
+    font-size: 1.5rem;
+  }
+
+  .cronograma-item {
+    padding: 1rem;
+  }
+
+  .evento-estelar-titulo {
+    font-size: 1.4rem;
+  }
+
+  .evento-estelar-descripcion {
+    font-size: 1.5rem;
+  }
+}
