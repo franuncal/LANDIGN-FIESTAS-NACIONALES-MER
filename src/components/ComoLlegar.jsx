@@ -43,7 +43,7 @@ const ComoLlegar = () => {
             </div>
             <h3 className="transporte-titulo">Colectivo</h3>
             <p className="transporte-descripcion">
-              Buses y combis desde CABA y Zona Oeste (consultá empresas
+              Colectivos y combis desde CABA y Zona Oeste (consultá empresas
               locales).
             </p>
           </div>

@@ -4,13 +4,13 @@
         "fecha": "2025-04-01",
         "resumen": "Miles de personas disfrutaron del evento inaugural con shows en vivo, gastronomía y actividades culturales.",
         "link": "https://example.com/noticia1",
-        "imagen": "../assets/img-TF/TF15.JPG"
+        "imagen": "../assets/img-TF/TF15.webp"
     },
     {
         "titulo": "Nueva programación para el segundo día",
         "fecha": "2025-04-02",
         "resumen": "Se anunciaron cambios en los horarios de algunas actividades debido a las condiciones climáticas.",
         "link": "https://example.com/noticia2",
-        "imagen": "../assets/img-TF/TF16.JPG"
+        "imagen": "../assets/img-TF/TF16.webp"
     }
 ]

@@ -3,12 +3,13 @@
         "id": 1,
         "nombre": "Fiesta de la Torta Frita",
         "fecha": "2025-05-10T00:00:00",
-        "banner": "../assets/img-TF/TF5.JPG",
-        "colorPrimario": "#F29222",
+        "rangoFechas": "10 y 11 DE MAYO",
+        "banner": "../assets/img-TF/TF5.webp",
+        "colorPrimario": "#0f526f",
         "colorSecundario": "#F29222",
         "historia": {
             "descripcion": "La Fiesta Nacional de la Torta Frita celebra la tradición culinaria de Mercedes con eventos, música en vivo y la preparación de la torta frita más grande del mundo.",
-            "imagen": "../assets/img-TF/TF2.JPG",
+            "imagen": "../assets/img-TF/TF2.webp",
             "colorSecundario": "#0F526F"
         },
         "actividades": [
