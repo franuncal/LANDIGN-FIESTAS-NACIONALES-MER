@@ -13,6 +13,14 @@
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 2rem;
+  color: #0f526f;
+}
+
+.hospedaje-titulo .resaltado {
+  background-color: white;
+  color: #f29222;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3rem;
 }
 
 /* Slick Carousel ajustes */
@@ -40,6 +48,7 @@
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 1rem;
+  color: #0f526f;
 }
 
 .hospedaje-descripcion {
@@ -59,5 +68,5 @@
 }
 
 .hospedaje-boton:hover {
-  background-color: #d6801d;
+  background-color: #f4f4f4;
 }

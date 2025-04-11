@@ -6,7 +6,9 @@ const ComoLlegar = () => {
   return (
     <section id="como-llegar" className="como-llegar">
       <div className="como-llegar-contenedor">
-        <h2 className="como-llegar-titulo">¿Cómo llegar?</h2>
+        <h2 className="como-llegar-titulo">
+          ¿Cómo <span class="resaltado">llegar?</span>{" "}
+        </h2>
 
         <p className="como-llegar-texto">
           La Fiesta Nacional se realiza en el Parque Municipal Independencia de

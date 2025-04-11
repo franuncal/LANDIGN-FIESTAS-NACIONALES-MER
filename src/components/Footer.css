@@ -65,6 +65,7 @@
 .footer-icono {
   transition: color 0.3s ease;
   cursor: pointer;
+  color: #cccccc;
 }
 
 .footer-icono:hover {

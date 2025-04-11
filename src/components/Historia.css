@@ -18,6 +18,13 @@
   margin-bottom: 1rem;
 }
 
+.historia-titulo .resaltado {
+  background-color: white;
+  color: #f29222;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3rem;
+}
+
 .historia-descripcion {
   font-size: 1.2rem;
   line-height: 1.6;

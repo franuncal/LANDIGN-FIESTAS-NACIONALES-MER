@@ -11,7 +11,7 @@
 }
 
 .cronograma-titulo {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: bold;
   color: white;
   background-color: #f29222;
@@ -36,8 +36,14 @@
 }
 
 .cronograma-dia-titulo {
-  font-size: 1.8rem;
-  color: #f29222; /* Naranja */
+  color: white;
+  background-color: #f29222;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+  font-size: 1.6rem;
+
   margin-bottom: 1.5rem;
   text-align: center;
 }
@@ -58,7 +64,7 @@
 
 .cronograma-item {
   background-color: rgba(15, 82, 111);
-  padding: 1.5rem;
+  padding: 1.3rem;
   border-radius: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
@@ -85,11 +91,16 @@
 .evento-estelar {
   text-align: center;
   margin-top: 4rem;
-  background-color: #f29222;
+  /* background-color: #f29222; */
+  background: linear-gradient(
+    90deg,
+    #0f526f,
+    #e67e22
+  ); /* Gradiente violeta a naranja */
   color: white;
-  padding: 2rem 1rem;
+  padding: 1.2rem 0.6rem;
   border-radius: 1rem;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
 .evento-estelar-titulo {
@@ -120,6 +131,7 @@
   font-weight: bold;
   padding: 0.8rem 2rem;
   border-radius: 50px;
+  border: 1px solid #0f526f;
   text-decoration: none;
   transition: background-color 0.3s ease, transform 0.3s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);

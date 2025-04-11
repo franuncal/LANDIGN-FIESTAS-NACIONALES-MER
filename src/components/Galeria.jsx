@@ -25,7 +25,9 @@ const Galeria = ({ imagenes }) => {
   return (
     <section id="galeria" className="galeria">
       <div className="galeria-contenedor">
-        <h2 className="galeria-titulo">Reviví ediciones anteriores</h2>
+        <h2 className="galeria-titulo">
+          <span class="resaltado">Reviví</span> ediciones anteriores
+        </h2>
 
         <div className="galeria-imagen-contenedor">
           <img

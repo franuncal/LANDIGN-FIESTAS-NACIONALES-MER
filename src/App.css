@@ -1,28 +1,144 @@
-/* Reset básico */
+/* ----------------------------------- */
+/* Reset Básico                        */
+/* ----------------------------------- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Estilos globales */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ----------------------------------- */
+/* Cargar Tipografías Klavika           */
+/* ----------------------------------- */
+@font-face {
+  font-family: "Klavika";
+  src: url("/fonts/Klavika/Klavika-light-copy.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Klavika";
+  src: url("/fonts/Klavika/Klavika-light-italic-copy.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Klavika";
+  src: url("/fonts/Klavika/Klavika-Regular-copy.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Klavika";
+  src: url("/fonts/Klavika/Klavika-regular-italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Klavika";
+  src: url("/fonts/Klavika/Klavika-medium-copy.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Klavika";
+  src: url("/fonts/Klavika/Klavika-medium-italic-copy.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Klavika";
+  src: url("/fonts/Klavika/Klavika-bold_2-copy.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Klavika";
+  src: url("/fonts/Klavika/Klavika-bold-italic-copy.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* ----------------------------------- */
+/* Estilos Globales                    */
+/* ----------------------------------- */
 body {
-  font-family: "Arial", "Helvetica", sans-serif;
+  font-family: "Klavika", sans-serif;
+  font-weight: 400;
   line-height: 1.6;
   background-color: #ffffff;
   color: #333333;
 }
 
-/* Enlaces */
+/* ----------------------------------- */
+/* Estilos de Tipografías              */
+/* ----------------------------------- */
+
+/* Títulos */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Klavika", sans-serif;
+  font-weight: 700; /* Bold */
+  /* color: #0f4860;  */
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+/* Título Principal */
+h1 {
+  font-size: 2.5rem;
+}
+
+/* Subtítulos */
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+/* Textos generales */
+p,
+li,
+a {
+  font-family: "Klavika", sans-serif;
+  font-weight: 400; /* Regular */
+  font-size: 1rem;
+  /* color: #4a5568;  */
+}
+
+/* Links */
 a {
   text-decoration: none;
-  color: inherit;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #f29222; /* Naranja en hover */
 }
 
 /* Listas */
 ul,
 ol {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 /* Imágenes */
@@ -44,4 +160,27 @@ input,
 textarea,
 select {
   font-family: inherit;
+}
+
+/* ----------------------------------- */
+/* Responsive ajustes                  */
+/* ----------------------------------- */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  p,
+  li,
+  a {
+    font-size: 0.95rem;
+  }
 }

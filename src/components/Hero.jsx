@@ -34,19 +34,42 @@ const Hero = ({ evento }) => {
           })}
       </h3>
 
-      <p className="hero-description">
+      {/* <p className="hero-description">
         Vení a ver cómo preparamos <br />
         <strong>¡La Torta Frita más grande del mundo!</strong>
-      </p>
+      </p> */}
 
-      <div
-        className="hero-countdown"
-        style={{
-          backgroundColor: evento.colorPrimario,
-        }}
-      >
-        Faltan {tiempoRestante.dias}d {tiempoRestante.horas}h{" "}
-        {tiempoRestante.minutos}m {tiempoRestante.segundos}s para la fiesta
+      <div className="hero-countdown">
+        <div className="countdown-content">
+          <span className="clock-icon">🕒</span>
+          <span className="faltan-text">Faltan</span>
+
+          <div className="time-section">
+            <span className="time-number">{tiempoRestante.dias}</span>
+            <span className="time-label">Días</span>
+          </div>
+
+          <div className="separator">|</div>
+
+          <div className="time-section">
+            <span className="time-number">{tiempoRestante.horas}</span>
+            <span className="time-label">Horas</span>
+          </div>
+
+          <div className="separator">|</div>
+
+          <div className="time-section">
+            <span className="time-number">{tiempoRestante.minutos}</span>
+            <span className="time-label">Minutos</span>
+          </div>
+
+          <div className="separator">|</div>
+
+          <div className="time-section">
+            <span className="time-number">{tiempoRestante.segundos}</span>
+            <span className="time-label">Segundos</span>
+          </div>
+        </div>
       </div>
     </section>
   );

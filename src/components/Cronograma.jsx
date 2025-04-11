@@ -20,7 +20,7 @@ const Cronograma = ({ actividades }) => {
   }, {});
 
   return (
-    <section className="cronograma">
+    <section id="eventos" className="cronograma">
       <div className="cronograma-contenedor">
         <h2 className="cronograma-titulo">
           Cronograma de <span class="resaltado">ACTIVIDADES</span>
@@ -58,7 +58,7 @@ const Cronograma = ({ actividades }) => {
             rel="noopener noreferrer"
             className="boton-entradas"
           >
-            <FaTicketAlt className="icono-ticket" /> Comprar Entradas
+            <FaTicketAlt className="icono-ticket" /> Click aqui para Entradas
           </a>
         </div>
       </div>

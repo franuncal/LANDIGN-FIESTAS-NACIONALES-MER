@@ -32,7 +32,9 @@ const Hospedaje = ({ hospedajes }) => {
   return (
     <section id="hospedaje" className="hospedaje">
       <div className="hospedaje-contenedor">
-        <h2 className="hospedaje-titulo">Hospedate en Mercedes</h2>
+        <h2 className="hospedaje-titulo">
+          Hospedate en <span class="resaltado">MERCEDES</span>
+        </h2>
 
         <Slider {...settings} className="hospedaje-slider">
           {hospedajes.map((lugar, index) => (
