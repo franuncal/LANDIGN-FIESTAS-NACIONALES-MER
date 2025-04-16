@@ -1,17 +1,110 @@
 [
     {
-        "nombre": "Hotel Mercedes",
+        "nombre": "HOTEL MERCEDES",
         "descripcion": "Confort y servicio en el centro de la ciudad.",
-        "link": "https://hotelmercedes.com.ar"
+        "link": "https://maps.app.goo.gl/yX5eC3sNLUsxwi329",
+        "instagram": "https://www.instagram.com/granhotelmercedes/?hl=es"
     },
     {
-        "nombre": "Cabañas La Armonía",
-        "descripcion": "Cabañas rodeadas de naturaleza y tranquilidad.",
-        "link": "https://cabanaslaarmonia.com"
+        "nombre": "HOSTAL DEL SOL",
+        "descripcion": "Tranquilidad y atención familiar cerca del centro.",
+        "link": "https://maps.app.goo.gl/1b5vHKehuhFgF2y89",
+        "instagram": ""
     },
     {
-        "nombre": "Hostel Ruta 5",
+        "nombre": "HOTEL COSTA",
         "descripcion": "Ideal para jóvenes viajeros, a pasos de la estación.",
-        "link": "https://hostelruta5.com"
+        "link": "https://maps.app.goo.gl/VQRUeLkjBeoPWFEdA",
+        "instagram": ""
+    },
+    {
+        "nombre": "CABAÑAS LA COLORADA",
+        "descripcion": "Chacra rural en Altamira, descanso asegurado.",
+        "link": "https://maps.app.goo.gl/VfHCrSxf9HstHK5W6",
+        "instagram": "https://www.instagram.com/chacra_lacolorada/"
+    },
+    {
+        "nombre": "CABAÑAS LA NIÑA",
+        "descripcion": "Cabañas familiares en plena naturaleza.",
+        "link": "https://maps.app.goo.gl/eMGt88sA4tJXZdeM8",
+        "instagram": "https://www.instagram.com/cabanaslanina/?hl=es-la"
+    },
+    {
+        "nombre": "CABAÑAS PUESTAS DEL SOL",
+        "descripcion": "Relajate en Altamira, vistas soñadas.",
+        "link": "https://maps.app.goo.gl/Vo3w3khcZ8aroC6E8",
+        "instagram": "https://www.instagram.com/puestasdelsolaltamira/"
+    },
+    {
+        "nombre": "CABAÑAS SANTA MARÍA",
+        "descripcion": "Naturaleza y comodidad en Altamira.",
+        "link": "https://maps.app.goo.gl/d3obCcoj7QhZRcLc6",
+        "instagram": "https://www.instagram.com/hosteriasantamaria/"
+    },
+    {
+        "nombre": "FINCA LA PAQUITA",
+        "descripcion": "Finca rural para desconectar del ritmo diario.",
+        "link": "https://maps.app.goo.gl/JUTbxtaQdebL6BjL8",
+        "instagram": "https://www.instagram.com/fincalapaquita/"
+    },
+    {
+        "nombre": "HOSTERÍA CUA CUA",
+        "descripcion": "Encanto campestre en Tomás Jofré.",
+        "link": "https://maps.app.goo.gl/JYQAxgVJogg2b3fM6",
+        "instagram": "https://www.instagram.com/hospedajecuacua/"
+    },
+    {
+        "nombre": "HOTEL DE CAMPO EL TIZÓN",
+        "descripcion": "Campo y relax en el corazón rural.",
+        "link": "https://maps.app.goo.gl/QjRNhKTRzWoxymv86",
+        "instagram": "https://www.instagram.com/campoeltizon/"
+    },
+    {
+        "nombre": "CASAS DE CAMPO LA SOLEDAD",
+        "descripcion": "Casas de campo para disfrutar Tomás Jofré.",
+        "link": "https://maps.app.goo.gl/Fm4vsYg9imeiVxdc8",
+        "instagram": "https://www.instagram.com/la_soledadjofre/?hl=es"
+    },
+    {
+        "nombre": "DORMIS NOELANDIA",
+        "descripcion": "Dormis sencillos en acceso a Mercedes.",
+        "link": "https://maps.app.goo.gl/kxaytcooa71LNk1g8",
+        "instagram": "https://www.instagram.com/noelandia_/"
+    },
+    {
+        "nombre": "CABAÑAS LA FRATELLI",
+        "descripcion": "Cabañas confortables en Mercedes.",
+        "link": "https://maps.app.goo.gl/BXS8DAdCSA6dyj85A",
+        "instagram": "https://www.instagram.com/lafratellimercedes/"
+    },
+    {
+        "nombre": "CASAS DE CAMPO SANTO PIETRO",
+        "descripcion": "Escapada perfecta en Tomás Jofré.",
+        "link": "https://maps.app.goo.gl/qVRc5ot9vQTYuQjh8",
+        "instagram": "https://www.instagram.com/fincasantopietro/"
+    },
+    {
+        "nombre": "CASA DE CAMPO PAMPA Y LA VÍA",
+        "descripcion": "Relajo total en la zona rural de Mercedes.",
+        "link": "https://maps.app.goo.gl/aLC8RARQ9gsAUCHd8",
+        "instagram": "https://www.instagram.com/pampa_ylavia/"
+    },
+    {
+        "nombre": "CASA DE CAMPO CHACRA EL HORNERO",
+        "descripcion": "Chacra tradicional para descansar.",
+        "link": "https://maps.app.goo.gl/S8jE4BJbnoZCbNjx5",
+        "instagram": "https://www.instagram.com/chacraelhornero/"
+    },
+    {
+        "nombre": "CABAÑAS NIPPUR",
+        "descripcion": "Cabañas acogedoras en Altamira.",
+        "link": "https://maps.app.goo.gl/6AAAuGqqKzeJ1eSh6",
+        "instagram": "https://www.instagram.com/cabanasnippur/"
+    },
+    {
+        "nombre": "CABAÑAS LAS ACACIAS",
+        "descripcion": "Cabañas ideales para una escapada rural.",
+        "link": "https://maps.app.goo.gl/7mUTRQdyoX4vSXZq9",
+        "instagram": "https://www.instagram.com/lasacacias2023"
     }
 ]

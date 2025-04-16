@@ -1,6 +1,6 @@
 .hospedaje {
   padding: 3rem 1rem;
-  background-color: rgb(15, 82, 111, 0.2);
+  background-color: rgba(15, 82, 111, 0.2);
 }
 
 .hospedaje-contenedor {
@@ -23,7 +23,7 @@
   border-radius: 0.3rem;
 }
 
-/* Slick Carousel ajustes */
+/* Carrusel ajustes */
 .hospedaje-slider .slick-slide {
   padding: 0 10px;
 }
@@ -32,17 +32,59 @@
   bottom: -30px;
 }
 
-.hospedaje-card {
-  background-color: #f7fafc;
-  /* background-color: #f29222; */
-  border-radius: 1rem;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-  padding: 1.5rem;
-  height: 100%;
+/* Contenedor de cada slide (que incluye 3 hospedajes) */
+.hospedaje-slide-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Cada hospedaje */
+.hospedaje-slider {
+  display: flex;
+  align-items: stretch; /* Asegura que todas las cards tengan la misma altura */
+}
+
+.hospedaje-item {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  position: relative;
+  background-color: #f7fafc;
+  padding: 1rem;
+  border-left: 4px solid #f29222;
+  transition: transform 0.3s ease;
+  flex: 1;
+  min-width: 250px;
+  max-width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
 }
+
+.hospedaje-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Líneas decorativas arriba y abajo */
+/* .hospedaje-item::before,
+.hospedaje-item::after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 50%;
+  background-color: #f29222;
+  margin: 0.5rem auto;
+  border-radius: 999px;
+}
+
+.hospedaje-item::before {
+  margin-bottom: 1rem;
+}
+
+.hospedaje-item::after {
+  margin-top: 1rem;
+} */
 
 .hospedaje-nombre {
   font-size: 1.25rem;
@@ -63,10 +105,40 @@
   font-weight: 600;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
   text-decoration: none;
 }
 
 .hospedaje-boton:hover {
   background-color: #f4f4f4;
+  color: #0f526f;
+}
+
+.hospedaje-iconos {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.hospedaje-icono {
+  font-size: 1.5rem;
+  color: #f29222;
+  transition: color 0.3s ease;
+}
+
+.hospedaje-icono:hover {
+  color: #0f526f;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hospedaje-slide-group {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .hospedaje-item {
+    max-width: 100%;
+  }
 }

@@ -7,7 +7,7 @@ const ComoLlegar = () => {
     <section id="como-llegar" className="como-llegar">
       <div className="como-llegar-contenedor">
         <h2 className="como-llegar-titulo">
-          ¿Cómo <span class="resaltado">llegar?</span>{" "}
+          ¿Cómo <span className="resaltado">llegar?</span>{" "}
         </h2>
 
         <p className="como-llegar-texto">
@@ -51,6 +51,17 @@ const ComoLlegar = () => {
           </div>
         </div>
 
+        {/* 🔥 Botón de Más Información */}
+        <div className="mas-info">
+          <a
+            href="https://nw.mercedes.gob.ar/transportes"
+            target="_blank"
+            className="boton-mas-info"
+          >
+            Más Información
+          </a>
+        </div>
+
         {/* 🔥 Mapa */}
         <div className="como-llegar-mapa">
           <iframe
@@ -63,6 +74,7 @@ const ComoLlegar = () => {
             loading="lazy"
           ></iframe>
         </div>
+
         {/* 🔥 Link para comprar entradas */}
         <div className="cronograma-entradas">
           <a

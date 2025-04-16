@@ -1,16 +1,16 @@
 [
     {
-        "titulo": "Gran éxito en la apertura de la Fiesta",
-        "fecha": "2025-04-01",
-        "resumen": "Miles de personas disfrutaron del evento inaugural con shows en vivo, gastronomía y actividades culturales.",
-        "link": "https://example.com/noticia1",
-        "imagen": "../assets/img-TF/TF15.webp"
+        "titulo": "Se viene la 25° Fiesta Nacional de la Torta Frita",
+        "fecha": "2025-04-16",
+        "resumen": "En Tomás Jofré se llevó adelante la presentación de la Fiesta Nacional de la Trota Frita que se realizará el próximo 10 y 11 de mayo en el Parque Municipal Independencia.",
+        "link": "https://nw.mercedes.gob.ar/4614/se-viene-la-250-fiesta-nacional-de-la-torta-frita",
+        "imagen": "../assets/img-TF/TF18.webp"
     },
     {
-        "titulo": "Nueva programación para el segundo día",
-        "fecha": "2025-04-02",
-        "resumen": "Se anunciaron cambios en los horarios de algunas actividades debido a las condiciones climáticas.",
-        "link": "https://example.com/noticia2",
-        "imagen": "../assets/img-TF/TF16.webp"
+        "titulo": "Amplio Marco Turístico",
+        "fecha": "2025-04-17",
+        "resumen": "El intendente Juan I. Ustarroz afirmó que “estamos muy contentos de estar acá en Tomas Jofré lanzando y promocionando esta gran fiesta junto a sus protagonistas”.",
+        "link": "https://nw.mercedes.gob.ar/4614/se-viene-la-250-fiesta-nacional-de-la-torta-frita",
+        "imagen": "../assets/img-TF/TF19.webp"
     }
 ]

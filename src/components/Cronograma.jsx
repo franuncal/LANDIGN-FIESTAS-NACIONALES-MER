@@ -58,7 +58,7 @@ const Cronograma = ({ actividades }) => {
             rel="noopener noreferrer"
             className="boton-entradas"
           >
-            <FaTicketAlt className="icono-ticket" /> Click aqui para Entradas
+            <FaTicketAlt className="icono-ticket" /> Comprar Entradas
           </a>
         </div>
       </div>

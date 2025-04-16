@@ -94,6 +94,27 @@
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
+/* Estilo del botón "Más Información" */
+.mas-info {
+  margin: 2rem 0;
+}
+
+.boton-mas-info {
+  display: inline-block;
+  background-color: #f29222;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.boton-mas-info:hover {
+  background-color: #f4f4f4;
+  color: #0f526f;
+}
+
 /* 📱 Responsive ajustes */
 @media (max-width: 768px) {
   .como-llegar {
