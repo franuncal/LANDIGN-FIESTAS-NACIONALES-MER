@@ -15,10 +15,9 @@ const Header = () => {
   return (
     <header className="header">
       <div className="container">
-        {/* CAMBIO: Logo de imagen en lugar de texto */}
         <a href="#inicio" className="logo">
           <img
-            src="../assets/Logos/logo1.png" /* Ruta del logo (colocalo en public/assets/) */
+            src="../assets/Logos/logom1.png"
             alt="Fiesta de la Torta Frita"
             className="logo-imagen"
           />

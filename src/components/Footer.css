@@ -4,33 +4,27 @@
   padding: 2rem 1rem;
 }
 
-.footer-titulo {
-  text-align: center;
-  font-size: 1.5rem;
-  color: #cccccc;
-  margin-bottom: 2rem; /* Aumentamos el margen debajo del título */
-  border-bottom: none;
-}
-
 .footer-contenedor {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   gap: 2rem;
+  justify-content: center;
   max-width: 1200px;
   margin: 0 auto;
-  text-align: center;
 }
 
 .footer-seccion {
-  flex: 1;
+  flex: 1 1 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  text-align: center;
 }
 
-.footer-seccion.contacto {
-  margin-bottom: 3rem; /* Aumentamos el espacio debajo de la sección Contacto */
+.footer-seccion h4 {
+  margin-bottom: 0.5rem;
+  color: #f2f2f2;
 }
 
 .footer-item {
@@ -40,104 +34,56 @@
   font-size: 1rem;
 }
 
-.footer-redes {
-  display: flex;
-  gap: 1rem;
-  font-size: 1.4rem;
-}
-
-.footer-icono {
-  color: #cccccc;
-  transition: color 0.3s ease;
-  cursor: pointer;
-}
-
-.footer-icono:hover {
-  color: #f29222;
-}
-
-.footer-copy {
-  margin-top: 2rem;
-  text-align: center;
-  font-size: 0.9rem;
-  color: #cccccc;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  padding-top: 1rem;
-}
-
 .footer-item a {
   color: #cccccc;
   text-decoration: none;
   transition: color 0.3s ease;
-  cursor: pointer;
 }
 
 .footer-item a:hover {
   color: #f29222;
 }
 
-.footer-logo {
-  width: 100%;
+.footer-redes {
   display: flex;
-  justify-content: center; /* Centrado horizontal con flex */
-  align-items: center;
+  gap: 1rem;
+  font-size: 1.4rem;
+  justify-content: center;
+}
+
+.footer-redes a {
+  color: #cccccc;
+  transition: color 0.3s ease;
+}
+
+.footer-redes a:hover {
+  color: #f29222;
+}
+
+.footer-logo {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
 }
 
 .footer-logo img {
   max-width: 150px;
   height: auto;
-  filter: brightness(0) invert(1); /* Blanco sobre fondo oscuro */
+  filter: brightness(0) invert(1);
   opacity: 0.85;
 }
 
-/* Linea divisoria vertical para desktop y tablet */
-@media (min-width: 768px) {
-  .footer-contenedor {
-    flex-direction: row;
-    align-items: flex-start;
-  }
-
-  .footer-seccion {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .footer-seccion.contacto {
-    border-right: 1px solid rgba(255, 255, 255, 0.3);
-    padding-right: 2rem;
-    margin-bottom: 3rem; /* Aumentamos el espacio debajo de la sección Contacto también en desktop */
-  }
-
-  /* Línea vertical entre las dos secciones de redes sociales */
-  .footer-seccion.redes-institucionales {
-    border-right: 1px solid rgba(255, 255, 255, 0.3);
-    padding-right: 2rem;
-  }
+.footer-copy {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 1rem;
 }
 
-/* Responsive para móviles */
-@media (max-width: 480px) {
-  .footer-contenedor {
-    flex-direction: column;
-    text-align: center;
-    gap: 0.2rem;
-  }
-
+/* Responsive */
+@media (max-width: 768px) {
   .footer-seccion {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .footer-seccion.contacto {
-    padding-bottom: 2rem;
-  }
-
-  .footer-seccion.redes-institucionales,
-  .footer-seccion.redes-evento {
-    margin-top: 2rem;
+    flex: 1 1 100%;
   }
 }

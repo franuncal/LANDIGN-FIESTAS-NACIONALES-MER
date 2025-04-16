@@ -11,12 +11,10 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <footer id="contacto" className="footer">
-      {/* Título centralizado */}
-      <div className="footer-titulo">{/* <h3>Contacto</h3> */}</div>
-
       <div className="footer-contenedor">
-        {/* Sección de Contacto: Móvil y Desktop */}
+        {/* Contacto */}
         <div className="footer-seccion contacto">
+          <h4>Contacto</h4>
           <div className="footer-item">
             <FaEnvelope />
             <a href="mailto:turismomercedes@gmail.com">
@@ -29,62 +27,64 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Sección Redes Sociales Institucionales */}
-        <div className="footer-seccion redes-institucionales">
+        {/* Redes institucionales */}
+        <div className="footer-seccion redes">
+          <h4>Municipalidad</h4>
           <div className="footer-redes">
             <a
               href="https://www.facebook.com/munimercedes/?locale=es_LA"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaFacebookF className="footer-icono" />
+              <FaFacebookF />
             </a>
             <a
               href="https://www.instagram.com/munimercedes/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaInstagram className="footer-icono" />
+              <FaInstagram />
             </a>
             <a
               href="https://x.com/munimercedes"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaTwitter className="footer-icono" />
+              <FaTwitter />
             </a>
           </div>
           <p>@munimercedes</p>
         </div>
 
-        {/* Sección Redes Sociales Evento */}
-        <div className="footer-seccion redes-evento">
+        {/* Redes evento */}
+        <div className="footer-seccion redes">
+          <h4>Turismo</h4>
           <div className="footer-redes">
             <a
               href="https://www.facebook.com/dirturmercedes/?locale=es_LA"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaFacebookF className="footer-icono" />
+              <FaFacebookF />
             </a>
             <a
               href="https://www.instagram.com/turismomercedesoficial/?hl=es"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaInstagram className="footer-icono" />
+              <FaInstagram />
             </a>
           </div>
           <p>@turismomercedesoficial</p>
         </div>
       </div>
-      {/* Logo Institucional */}
+
+      {/* Logo */}
       <div className="footer-logo">
-        {/* <img src="../assets/Logos/logo3.png" alt="Municipalidad de Mercedes" /> */}
-        <img src="../assets/Logos/logo1.png" alt="Municipalidad de Mercedes" />
-        {/* <img src="../assets/Logos/logoM.png" alt="Municipalidad de Mercedes" /> */}
+        <img src="../assets/Logos/logom1.png" alt="Municipalidad de Mercedes" />
       </div>
 
+      {/* Copyright */}
       <div className="footer-copy">
         © 2025 Municipalidad de Mercedes. Todos los derechos reservados.
       </div>
