@@ -16,22 +16,22 @@
         "actividades": [
             {
                 "nombre": "Apertura del Predio",
-                "descripcion": "Información de horarios y formas de acceder al Parque Municipal",
+                "descripcion": "¡Damos inicio a una jornada llena de actividades! Te esperamos desde las 10:00 hs para disfrutar del espacio, recorrer el predio y empezar a vivir una experiencia única.",
                 "fecha": "2025-05-10T18:00:00"
             },
             {
-                "nombre": "Evento 1",
-                "descripcion": "Información del evento",
+                "nombre": "Feria Artesanal",
+                "descripcion": "Descubrí el talento local en cada rincón. Emprendedores y artesanos presentan sus productos únicos, hechos a mano con creatividad y pasión.",
                 "fecha": "2025-05-10T18:00:00"
             },
             {
-                "nombre": "Evento 2",
-                "descripcion": "Información del evento",
+                "nombre": "Feria Gastronómica / Foodtrucks",
+                "descripcion": "Sabores para todos los gustos: platos típicos, opciones gourmet y delicias dulces en un paseo gastronómico imperdible.",
                 "fecha": "2025-05-10T18:00:00"
             },
             {
-                "nombre": "Evento 3",
-                "descripcion": "Información del evento",
+                "nombre": "Shows de Artistas Locales",
+                "descripcion": "La música en vivo no puede faltar. Bandas y solistas locales se suben al escenario para compartir su arte y hacer vibrar al público.",
                 "fecha": "2025-05-10T14:00:00"
             },
             {
@@ -40,18 +40,18 @@
                 "fecha": "2025-05-11T17:00:00"
             },
             {
-                "nombre": "Evento 1",
-                "descripcion": "Información del evento",
+                "nombre": "Cantinas Solidarias",
+                "descripcion": "Disfrutá algo rico mientras colaborás con distintas instituciones de la comunidad. Todo lo recaudado tiene un fin solidario.",
                 "fecha": "2025-05-11T17:00:00"
             },
             {
-                "nombre": "Evento 2",
-                "descripcion": "Información del evento",
+                "nombre": "Feria Artesanal",
+                "descripcion": "Descubrí el talento local en cada rincón. Emprendedores y artesanos presentan sus productos únicos, hechos a mano con creatividad y pasión.",
                 "fecha": "2025-05-11T20:00:00"
             },
             {
-                "nombre": "Evento 3",
-                "descripcion": "Información del evento",
+                "nombre": "Shows de Artistas Locales",
+                "descripcion": "La música en vivo no puede faltar. Bandas y solistas locales se suben al escenario para compartir su arte y hacer vibrar al público.",
                 "fecha": "2025-05-11T20:00:00"
             }
         ]
