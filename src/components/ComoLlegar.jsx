@@ -96,7 +96,7 @@ const ComoLlegar = () => {
               className="boton-ver-mas"
               onClick={() => mostrarPDF("urbanos")}
             >
-              Colectivos Urbanos
+              Urbanos
             </button>
           </div>
         </div>

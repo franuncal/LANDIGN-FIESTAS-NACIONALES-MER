@@ -141,4 +141,10 @@
   .hospedaje-item {
     max-width: 100%;
   }
+
+  .hospedaje-slider .slick-dots,
+  .hospedaje-slider .slick-prev,
+  .hospedaje-slider .slick-next {
+    display: none !important;
+  }
 }

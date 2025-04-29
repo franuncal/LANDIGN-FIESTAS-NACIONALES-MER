@@ -19,6 +19,8 @@ const Hospedaje = ({ hospedajes }) => {
         breakpoint: 768,
         settings: {
           slidesToShow: 1,
+          arrows: false, // 👈 Oculta los botones
+          dots: false, // 👈 Oculta los puntos
         },
       },
     ],
