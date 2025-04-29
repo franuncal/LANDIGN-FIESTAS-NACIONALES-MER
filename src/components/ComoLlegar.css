@@ -15,8 +15,8 @@
   color: white;
   background-color: #f29222;
   display: inline-block;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 0.6rem;
   text-transform: uppercase;
   margin-bottom: 2rem;
 }
@@ -24,59 +24,61 @@
 .resaltado {
   background-color: white;
   color: #f29222;
-  padding: 0.2rem 0.5rem;
+  padding: 0.2rem 0.6rem;
   border-radius: 0.3rem;
 }
 
 .como-llegar-texto {
   font-size: 1.1rem;
   color: #4a5568;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 /* GRID de transporte */
 .transporte-opciones {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
   justify-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 .transporte-card {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(10px);
   border-radius: 1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  padding: 1.2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  padding: 2rem 1rem;
+  width: 100%;
+  max-width: 260px;
   text-align: center;
   transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .transporte-card:hover {
   transform: translateY(-5px);
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.6);
 }
 
 .transporte-icono {
-  font-size: 2.6rem;
+  font-size: 2.8rem;
   color: #f29222;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1rem;
 }
 
 .boton-ver-mas {
-  background-color: rgba(15, 82, 111, 0.8);
+  background-color: #0f526f;
   color: white;
   border: none;
-  padding: 0.4rem 1rem;
+  padding: 0.5rem 1.2rem;
   border-radius: 0.5rem;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .boton-ver-mas:hover {
-  background-color: rgba(18, 117, 153, 0.8);
+  background-color: #127599;
 }
 
 /* Modal PDF */
@@ -146,7 +148,6 @@
   background-color: #127599;
 }
 
-/* PDF embebido responsivo */
 .modal-pdf iframe {
   width: 100%;
   aspect-ratio: 1 / 1;

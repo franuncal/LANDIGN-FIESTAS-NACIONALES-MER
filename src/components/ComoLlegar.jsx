@@ -5,8 +5,6 @@
 // const ComoLlegar = () => {
 //   const [pdfSeleccionado, setPdfSeleccionado] = useState("");
 //   const [transporteSeleccionado, setTransporteSeleccionado] = useState("");
-
-//   const visorRef = useRef(null);
 //   const cardsRef = useRef(null);
 
 //   const pdfsDisponibles = {
@@ -31,19 +29,11 @@
 //   const mostrarPDF = (tipo) => {
 //     setTransporteSeleccionado(tipo);
 //     setPdfSeleccionado(pdfsDisponibles[tipo][0].url);
-
-//     setTimeout(() => {
-//       visorRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-//     }, 100);
 //   };
 
 //   const cerrarPDF = () => {
 //     setPdfSeleccionado("");
 //     setTransporteSeleccionado("");
-
-//     setTimeout(() => {
-//       cardsRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-//     }, 100);
 //   };
 
 //   return (
@@ -58,7 +48,7 @@
 //           la ciudad de Mercedes, Buenos Aires. ¡Te esperamos!
 //         </p>
 
-//         {/* Opciones de Transporte - Grid 2x2 en desktop */}
+//         {/* Grid de transporte */}
 //         <div className="transporte-opciones" ref={cardsRef}>
 //           <div className="transporte-card">
 //             <FaCar className="transporte-icono" />
@@ -101,32 +91,34 @@
 //           </div>
 //         </div>
 
-//         {/* Visor PDF */}
+//         {/* Modal de visor PDF */}
 //         {pdfSeleccionado && (
-//           <div ref={visorRef} className="visor-pdf">
-//             <button className="boton-cerrar" onClick={cerrarPDF}>
-//               <FaTimes />
-//             </button>
-//             <h3 className="titulo-pdf">Información detallada</h3>
-//             <div className="pdf-botones">
-//               {pdfsDisponibles[transporteSeleccionado].map((pdf, idx) => (
-//                 <button
-//                   key={idx}
-//                   className="boton-pdf"
-//                   onClick={() => setPdfSeleccionado(pdf.url)}
-//                 >
-//                   {pdf.nombre}
-//                 </button>
-//               ))}
+//           <div className="modal-overlay">
+//             <div className="modal-pdf">
+//               <button className="boton-cerrar" onClick={cerrarPDF}>
+//                 <FaTimes />
+//               </button>
+//               <h3>Información detallada</h3>
+//               <div className="pdf-botones">
+//                 {pdfsDisponibles[transporteSeleccionado].map((pdf, idx) => (
+//                   <button
+//                     key={idx}
+//                     className="boton-pdf"
+//                     onClick={() => setPdfSeleccionado(pdf.url)}
+//                   >
+//                     {pdf.nombre}
+//                   </button>
+//                 ))}
+//               </div>
+//               <iframe
+//                 src={`${pdfSeleccionado}#toolbar=0&navpanes=0&scrollbar=0`}
+//                 title="PDF"
+//               ></iframe>
 //             </div>
-//             <iframe
-//               src={`${pdfSeleccionado}#toolbar=0&navpanes=0&scrollbar=0`}
-//               title="PDF de transporte"
-//             ></iframe>
 //           </div>
 //         )}
 
-//         {/* Mapa - Google Maps */}
+//         {/* Mapa Google */}
 //         <div className="como-llegar-mapa">
 //           <iframe
 //             title="Mapa Fiesta Nacional Mercedes"
@@ -195,7 +187,6 @@ const ComoLlegar = () => {
           la ciudad de Mercedes, Buenos Aires. ¡Te esperamos!
         </p>
 
-        {/* Grid de transporte */}
         <div className="transporte-opciones" ref={cardsRef}>
           <div className="transporte-card">
             <FaCar className="transporte-icono" />
@@ -238,7 +229,6 @@ const ComoLlegar = () => {
           </div>
         </div>
 
-        {/* Modal de visor PDF */}
         {pdfSeleccionado && (
           <div className="modal-overlay">
             <div className="modal-pdf">
@@ -265,7 +255,6 @@ const ComoLlegar = () => {
           </div>
         )}
 
-        {/* Mapa Google */}
         <div className="como-llegar-mapa">
           <iframe
             title="Mapa Fiesta Nacional Mercedes"
