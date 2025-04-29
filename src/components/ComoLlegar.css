@@ -41,13 +41,13 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-/* 🔥 Opciones de Transporte */
+/* 🔥 Opciones de Transporte - Ahora con Grid */
 .transporte-opciones {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
-  flex-wrap: wrap;
   margin: 2rem 0;
+  justify-items: center;
 }
 
 .transporte-card {
@@ -55,7 +55,8 @@
   border-radius: 1rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 1.5rem;
-  width: 250px;
+  width: 100%;
+  max-width: 400px;
   text-align: center;
   transition: transform 0.3s;
 }
@@ -81,6 +82,86 @@
   color: #4a5568;
 }
 
+.boton-ver-mas {
+  background-color: #f29222;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.boton-ver-mas:hover {
+  background-color: #ffaf55;
+}
+
+/* 🔥 Estilo del visor de PDF */
+.visor-pdf {
+  margin-top: 2rem;
+  position: relative;
+  background: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  animation: slideDown 0.5s ease-out;
+}
+
+.visor-pdf iframe {
+  width: 100%;
+  height: 600px;
+  border: none;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}
+
+.titulo-pdf {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #f29222;
+  margin-bottom: 1rem;
+}
+
+.pdf-botones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.boton-pdf {
+  background-color: #0f526f;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.boton-pdf:hover {
+  background-color: #127599;
+}
+
+.boton-cerrar {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: #999;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.boton-cerrar:hover {
+  color: #f29222;
+}
+
 /* 🔥 Mapa */
 .como-llegar-mapa {
   margin-top: 2rem;
@@ -94,35 +175,26 @@
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilo del botón "Más Información" */
-.mas-info {
-  margin: 2rem 0;
+/* 🔥 Animaciones */
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.boton-mas-info {
-  display: inline-block;
-  background-color: #f29222;
-  color: #ffffff;
-  font-weight: 600;
-  padding: 0.8rem 1.5rem;
-  border-radius: 0.5rem;
-  text-decoration: none;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.boton-mas-info:hover {
-  background-color: #f4f4f4;
-  color: #0f526f;
-}
-
-/* 📱 Responsive ajustes */
+/* 📱 Responsive */
 @media (max-width: 768px) {
   .como-llegar {
     padding: 2rem 1rem;
   }
 
   .como-llegar-titulo {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 
   .como-llegar-texto {
@@ -131,13 +203,16 @@
   }
 
   .transporte-opciones {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr;
   }
 
   .transporte-card {
     width: 100%;
     max-width: 300px;
+  }
+
+  .visor-pdf iframe {
+    height: 300px;
   }
 
   .como-llegar-mapa iframe {

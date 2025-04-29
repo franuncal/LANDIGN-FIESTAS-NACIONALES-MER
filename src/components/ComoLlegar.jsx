@@ -1,13 +1,56 @@
-import React from "react";
-import { FaCar, FaTrain, FaBus, FaTicketAlt } from "react-icons/fa";
+import React, { useState, useRef } from "react";
+import { FaCar, FaTrain, FaBus, FaTicketAlt, FaTimes } from "react-icons/fa";
 import "./ComoLlegar.css";
 
 const ComoLlegar = () => {
+  const [pdfSeleccionado, setPdfSeleccionado] = useState("");
+  const [transporteSeleccionado, setTransporteSeleccionado] = useState("");
+
+  const visorRef = useRef(null); // referencia al visor
+  const cardsRef = useRef(null); // referencia a las cards
+
+  const pdfsDisponibles = {
+    auto: [{ nombre: "Ruta Nacional 5", url: "/pdfs/auto.pdf" }],
+    tren: [
+      { nombre: "Línea Sarmiento Mercedes-Moreno", url: "/pdfs/trenes.pdf" },
+      { nombre: "Línea Sarmiento Moreno-Mercedes", url: "/pdfs/trenes2.pdf" },
+    ],
+    colectivo: [
+      { nombre: "Atlantida 57", url: "/pdfs/atlantida57.pdf" },
+      { nombre: "Chevalier", url: "/pdfs/chevalier.pdf" },
+      { nombre: "Master Bus", url: "/pdfs/masterbus.pdf" },
+      { nombre: "TALP", url: "/pdfs/talp.pdf" },
+    ],
+    urbanos: [
+      { nombre: "Urbano Linea 1", url: "/pdfs/urbano1.pdf" },
+      { nombre: "Urbano Linea 2 - Ramal A", url: "/pdfs/urbano2.pdf" },
+      { nombre: "Urbano Linea 2 - Ramal B", url: "/pdfs/urbano2b.pdf" },
+    ],
+  };
+
+  const mostrarPDF = (tipo) => {
+    setTransporteSeleccionado(tipo);
+    setPdfSeleccionado(pdfsDisponibles[tipo][0].url);
+
+    setTimeout(() => {
+      visorRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 100);
+  };
+
+  const cerrarPDF = () => {
+    setPdfSeleccionado("");
+    setTransporteSeleccionado("");
+
+    setTimeout(() => {
+      cardsRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 100);
+  };
+
   return (
     <section id="como-llegar" className="como-llegar">
       <div className="como-llegar-contenedor">
         <h2 className="como-llegar-titulo">
-          ¿Cómo <span className="resaltado">llegar?</span>{" "}
+          ¿Cómo <span className="resaltado">llegar?</span>
         </h2>
 
         <p className="como-llegar-texto">
@@ -17,50 +60,99 @@ const ComoLlegar = () => {
           ¡Te esperamos para disfrutar de un evento único!
         </p>
 
-        {/* 🔥 Opciones de transporte */}
-        <div className="transporte-opciones">
+        {/* 🔥 Opciones de Transporte */}
+        <div className="transporte-opciones" ref={cardsRef}>
+          {/* Auto */}
           <div className="transporte-card">
             <div className="transporte-icono">
               <FaCar />
             </div>
             <h3 className="transporte-titulo">Auto</h3>
             <p className="transporte-descripcion">
-              Acceso por Ruta Nacional 5 (Buenos Aires - Mercedes).
+              Acceso por Ruta Nacional 5.
             </p>
+            <button
+              className="boton-ver-mas"
+              onClick={() => mostrarPDF("auto")}
+            >
+              En Auto
+            </button>
           </div>
 
+          {/* Tren */}
           <div className="transporte-card">
             <div className="transporte-icono">
               <FaTrain />
             </div>
             <h3 className="transporte-titulo">Tren</h3>
-            <p className="transporte-descripcion">
-              Línea Sarmiento desde Once hasta Mercedes (terminal).
-            </p>
+            <p className="transporte-descripcion">Línea Sarmiento.</p>
+            <button
+              className="boton-ver-mas"
+              onClick={() => mostrarPDF("tren")}
+            >
+              En Tren
+            </button>
           </div>
 
+          {/* Colectivo */}
           <div className="transporte-card">
             <div className="transporte-icono">
               <FaBus />
             </div>
             <h3 className="transporte-titulo">Colectivo</h3>
             <p className="transporte-descripcion">
-              Colectivos y combis desde CABA y Zona Oeste (consultá empresas
-              locales).
+              Colectivos y combis desde CABA y Zona Oeste.
             </p>
+            <button
+              className="boton-ver-mas"
+              onClick={() => mostrarPDF("colectivo")}
+            >
+              En Colectivo
+            </button>
+          </div>
+
+          {/* Colectivos Urbanos */}
+          <div className="transporte-card">
+            <div className="transporte-icono">
+              <FaBus />
+            </div>
+            <h3 className="transporte-titulo">Colectivos Urbanos</h3>
+            <p className="transporte-descripcion">
+              Líneas locales dentro de la ciudad de Mercedes.
+            </p>
+            <button
+              className="boton-ver-mas"
+              onClick={() => mostrarPDF("urbanos")}
+            >
+              Colectivos Urbanos
+            </button>
           </div>
         </div>
 
-        {/* 🔥 Botón de Más Información */}
-        <div className="mas-info">
-          <a
-            href="https://nw.mercedes.gob.ar/transportes"
-            target="_blank"
-            className="boton-mas-info"
-          >
-            Más Información
-          </a>
-        </div>
+        {/* 🔥 Visor PDF */}
+        {pdfSeleccionado && (
+          <div ref={visorRef} className="visor-pdf">
+            <button className="boton-cerrar" onClick={cerrarPDF}>
+              <FaTimes />
+            </button>
+            <h3 className="titulo-pdf">Información detallada</h3>
+            <div className="pdf-botones">
+              {pdfsDisponibles[transporteSeleccionado].map((pdf, idx) => (
+                <button
+                  key={idx}
+                  className="boton-pdf"
+                  onClick={() => setPdfSeleccionado(pdf.url)}
+                >
+                  {pdf.nombre}
+                </button>
+              ))}
+            </div>
+            <iframe
+              src={`${pdfSeleccionado}#toolbar=0&navpanes=0&scrollbar=0`}
+              title="PDF de transporte"
+            ></iframe>
+          </div>
+        )}
 
         {/* 🔥 Mapa */}
         <div className="como-llegar-mapa">
@@ -75,7 +167,7 @@ const ComoLlegar = () => {
           ></iframe>
         </div>
 
-        {/* 🔥 Link para comprar entradas */}
+        {/* 🔥 Entradas */}
         <div className="cronograma-entradas">
           <a
             href="https://mercedes.boleteriadigital.com.ar"
