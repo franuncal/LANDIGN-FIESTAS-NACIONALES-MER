@@ -34,9 +34,10 @@
   margin-bottom: 2rem;
 }
 
+/* Cards - Transporte */
 .transporte-opciones {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 1rem;
   justify-items: center;
   margin-bottom: 2rem;
@@ -48,25 +49,25 @@
   border-radius: 1rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   padding: 1.2rem;
+  text-align: center;
   max-width: 200px;
   width: 100%;
-  text-align: center;
   transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .transporte-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-6px);
   background: rgba(255, 255, 255, 0.5);
 }
 
 .transporte-icono {
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   color: #f29222;
   margin-bottom: 0.8rem;
 }
 
 .boton-ver-mas {
-  background-color: rgba(15, 82, 111, 0.8);
+  background-color: rgba(15, 82, 111, 0.85);
   color: white;
   border: none;
   padding: 0.4rem 1rem;
@@ -77,9 +78,10 @@
 }
 
 .boton-ver-mas:hover {
-  background-color: rgba(18, 117, 153, 0.8);
+  background-color: rgba(18, 117, 153, 0.85);
 }
 
+/* Visor PDF (desktop) */
 .visor-pdf {
   margin-top: 2rem;
   background: rgba(255, 255, 255, 0.7);
@@ -98,17 +100,21 @@
 
 .pdf-botones {
   margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
 }
 
 .boton-pdf {
   background-color: #0f526f;
   color: white;
   padding: 0.4rem 0.8rem;
-  margin: 0.3rem;
   border-radius: 0.5rem;
   border: none;
   font-size: 0.9rem;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .boton-pdf:hover {
@@ -130,11 +136,8 @@
   color: #f29222;
 }
 
-/* ✅ Wrapper para PDF que se adapta */
 .iframe-wrapper {
-  width: 100%;
-  overflow: hidden;
-  border-radius: 0.5rem;
+  margin-top: 1rem;
 }
 
 .iframe-wrapper iframe {
@@ -158,7 +161,55 @@
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
-/* 📱 Mobile */
+/* MODAL para PDF en mobile */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100dvh;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 1rem;
+}
+
+.modal-contenido {
+  background: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  max-width: 90vw;
+  width: 100%;
+  max-height: 90vh;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-contenido iframe {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}
+
+.modal-contenido .pdf-botones {
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .modal-overlay {
+    display: none;
+  }
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   .transporte-opciones {
     grid-template-columns: 1fr;
@@ -168,12 +219,7 @@
     max-width: 250px;
   }
 
-  .iframe-wrapper {
-    transform: scale(0.9);
-    transform-origin: top center;
-  }
-
-  .iframe-wrapper iframe {
-    height: 500px;
+  .visor-pdf iframe {
+    height: 400px;
   }
 }
