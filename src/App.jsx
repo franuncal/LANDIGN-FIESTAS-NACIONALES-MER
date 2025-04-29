@@ -37,6 +37,13 @@ function App() {
     "/assets/img-TF/TF17.webp",
   ];
 
+  const videosGaleria = [
+    "https://www.youtube.com/embed/Vr7fx-V9AA0",
+    "https://www.youtube.com/embed/LG7oCNuy84E",
+    // "https://www.youtube.com/embed/Vr7fx-V9AA0",
+    // podés agregar más si querés
+  ];
+
   useEffect(() => {
     const evento = obtenerEventoActivo(eventosData);
     setEventoActivo(evento);
@@ -56,7 +63,7 @@ function App() {
         <Hero evento={eventoActivo} />
         <Historia historia={eventoActivo.historia} />
         <Cronograma actividades={eventoActivo.actividades} />
-        <Galeria imagenes={imagenesGaleria} />
+        <Galeria imagenes={imagenesGaleria} videos={videosGaleria} />
         <Noticias noticias={noticiasData} />
         <ComoLlegar />
         <Hospedaje hospedajes={hospedajesData} />

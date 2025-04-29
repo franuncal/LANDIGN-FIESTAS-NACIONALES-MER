@@ -1,6 +1,6 @@
 .galeria {
   padding: 2.5rem 1rem;
-  background-color: #146689; /* gris clarito */
+  background-color: #146689;
 }
 
 .galeria-contenedor {
@@ -11,10 +11,9 @@
 
 .galeria-titulo {
   display: inline-block;
-  position: relative;
   font-size: 2.5rem;
   font-weight: bold;
-  margin: 0 auto 2.5rem auto; /* <- CENTRAR manualmente */
+  margin: 0 auto 2.5rem auto;
   color: white;
   padding: 0 0.5rem;
 }
@@ -26,11 +25,13 @@
   border-radius: 0.3rem;
 }
 
+/* 🖼 Imagenes */
 .galeria-imagen-contenedor {
   position: relative;
   overflow: hidden;
   border-radius: 1rem;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  margin-bottom: 2rem;
 }
 
 .galeria-imagen {
@@ -47,11 +48,11 @@
   background-color: rgba(255, 255, 255, 0.7);
   padding: 0.5rem;
   border-radius: 9999px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border: none;
   cursor: pointer;
   font-size: 1.5rem;
   transition: background-color 0.3s ease;
+  z-index: 1;
 }
 
 .galeria-boton:hover {
@@ -66,9 +67,28 @@
   right: 1rem;
 }
 
-/* ----------------------- */
-/* 📱 Responsive - Mobile   */
-/* ----------------------- */
+/* 🎬 Videos */
+.galeria-videos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.video-item {
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.video-item iframe {
+  width: 100%;
+  height: 250px;
+  border: none;
+  border-radius: 1rem;
+}
+
+/* 📱 Responsive */
 @media (max-width: 768px) {
   .galeria {
     padding: 2rem 1rem;
@@ -80,11 +100,19 @@
   }
 
   .galeria-imagen {
-    height: 18rem; /* bajamos el alto de la imagen */
+    height: 18rem;
   }
 
   .galeria-boton {
     font-size: 1.2rem;
     padding: 0.4rem;
+  }
+
+  .galeria-videos {
+    grid-template-columns: 1fr;
+  }
+
+  .video-item iframe {
+    height: 200px;
   }
 }

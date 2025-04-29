@@ -6,8 +6,8 @@ const ComoLlegar = () => {
   const [pdfSeleccionado, setPdfSeleccionado] = useState("");
   const [transporteSeleccionado, setTransporteSeleccionado] = useState("");
 
-  const visorRef = useRef(null); // referencia al visor
-  const cardsRef = useRef(null); // referencia a las cards
+  const visorRef = useRef(null);
+  const cardsRef = useRef(null);
 
   const pdfsDisponibles = {
     auto: [{ nombre: "Ruta Nacional 5", url: "/pdfs/auto.pdf" }],
@@ -22,9 +22,9 @@ const ComoLlegar = () => {
       { nombre: "TALP", url: "/pdfs/talp.pdf" },
     ],
     urbanos: [
-      { nombre: "Urbano Linea 1", url: "/pdfs/urbano1.pdf" },
-      { nombre: "Urbano Linea 2 - Ramal A", url: "/pdfs/urbano2.pdf" },
-      { nombre: "Urbano Linea 2 - Ramal B", url: "/pdfs/urbano2b.pdf" },
+      { nombre: "Urbano Línea 1", url: "/pdfs/urbano1.pdf" },
+      { nombre: "Urbano Línea 2 - Ramal A", url: "/pdfs/urbano2.pdf" },
+      { nombre: "Urbano Línea 2 - Ramal B", url: "/pdfs/urbano2b.pdf" },
     ],
   };
 
@@ -55,22 +55,13 @@ const ComoLlegar = () => {
 
         <p className="como-llegar-texto">
           La Fiesta Nacional se realiza en el Parque Municipal Independencia de
-          la ciudad de Mercedes, Buenos Aires.
-          <br />
-          ¡Te esperamos para disfrutar de un evento único!
+          la ciudad de Mercedes, Buenos Aires. ¡Te esperamos!
         </p>
 
-        {/* 🔥 Opciones de Transporte */}
+        {/* Opciones de Transporte - Grid 2x2 en desktop */}
         <div className="transporte-opciones" ref={cardsRef}>
-          {/* Auto */}
           <div className="transporte-card">
-            <div className="transporte-icono">
-              <FaCar />
-            </div>
-            <h3 className="transporte-titulo">Auto</h3>
-            <p className="transporte-descripcion">
-              Acceso por Ruta Nacional 5.
-            </p>
+            <FaCar className="transporte-icono" />
             <button
               className="boton-ver-mas"
               onClick={() => mostrarPDF("auto")}
@@ -79,13 +70,8 @@ const ComoLlegar = () => {
             </button>
           </div>
 
-          {/* Tren */}
           <div className="transporte-card">
-            <div className="transporte-icono">
-              <FaTrain />
-            </div>
-            <h3 className="transporte-titulo">Tren</h3>
-            <p className="transporte-descripcion">Línea Sarmiento.</p>
+            <FaTrain className="transporte-icono" />
             <button
               className="boton-ver-mas"
               onClick={() => mostrarPDF("tren")}
@@ -94,15 +80,8 @@ const ComoLlegar = () => {
             </button>
           </div>
 
-          {/* Colectivo */}
           <div className="transporte-card">
-            <div className="transporte-icono">
-              <FaBus />
-            </div>
-            <h3 className="transporte-titulo">Colectivo</h3>
-            <p className="transporte-descripcion">
-              Colectivos y combis desde CABA y Zona Oeste.
-            </p>
+            <FaBus className="transporte-icono" />
             <button
               className="boton-ver-mas"
               onClick={() => mostrarPDF("colectivo")}
@@ -111,15 +90,8 @@ const ComoLlegar = () => {
             </button>
           </div>
 
-          {/* Colectivos Urbanos */}
           <div className="transporte-card">
-            <div className="transporte-icono">
-              <FaBus />
-            </div>
-            <h3 className="transporte-titulo">Colectivos Urbanos</h3>
-            <p className="transporte-descripcion">
-              Líneas locales dentro de la ciudad de Mercedes.
-            </p>
+            <FaBus className="transporte-icono" />
             <button
               className="boton-ver-mas"
               onClick={() => mostrarPDF("urbanos")}
@@ -129,7 +101,7 @@ const ComoLlegar = () => {
           </div>
         </div>
 
-        {/* 🔥 Visor PDF */}
+        {/* Visor PDF */}
         {pdfSeleccionado && (
           <div ref={visorRef} className="visor-pdf">
             <button className="boton-cerrar" onClick={cerrarPDF}>
@@ -154,7 +126,7 @@ const ComoLlegar = () => {
           </div>
         )}
 
-        {/* 🔥 Mapa */}
+        {/* Mapa - Google Maps */}
         <div className="como-llegar-mapa">
           <iframe
             title="Mapa Fiesta Nacional Mercedes"
@@ -165,18 +137,6 @@ const ComoLlegar = () => {
             allowFullScreen=""
             loading="lazy"
           ></iframe>
-        </div>
-
-        {/* 🔥 Entradas */}
-        <div className="cronograma-entradas">
-          <a
-            href="https://mercedes.boleteriadigital.com.ar"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="boton-entradas"
-          >
-            <FaTicketAlt className="icono-ticket" /> Comprar Entradas
-          </a>
         </div>
       </div>
     </section>
