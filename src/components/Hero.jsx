@@ -18,6 +18,7 @@ const Hero = ({ evento }) => {
   return (
     <section
       className="hero"
+      id="hero"
       style={{
         backgroundImage: `url(${evento.banner})`,
       }}

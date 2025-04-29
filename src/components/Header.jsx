@@ -26,7 +26,7 @@ const Header = () => {
         <nav className={`nav ${menuAbierto ? "activo" : ""}`}>
           <ul className="nav-list">
             <li>
-              <a href="#inicio" onClick={cerrarMenu}>
+              <a href="#hero" onClick={cerrarMenu}>
                 Inicio
               </a>
             </li>
@@ -37,11 +37,11 @@ const Header = () => {
             </li>
             <li>
               <a href="#eventos" onClick={cerrarMenu}>
-                Eventos
+                Actividades
               </a>
             </li>
             <li>
-              <a href="#comollegar" onClick={cerrarMenu}>
+              <a href="#como-llegar" onClick={cerrarMenu}>
                 Cómo llegar
               </a>
             </li>
