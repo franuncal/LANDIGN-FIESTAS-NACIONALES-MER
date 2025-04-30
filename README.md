@@ -1,12 +1,39 @@
-# React + Vite
+README - Proyecto "Landing Fiesta de la Torta Frita"  
+Fecha de entrega: [30/04/2025]
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+📁 Contenido del paquete
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Este paquete contiene la versión final y compilada del sitio web desarrollado con React para la "Fiesta de la Torta Frita". Los archivos están listos para ser subidos al servidor del cliente.
 
-## Expanding the ESLint configuration
+- Carpeta: build/
+- Archivos estáticos optimizados para producción (HTML, CSS, JS, imágenes, etc.)
+- No se incluyen archivos fuente ni código editable
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+🚀 Instrucciones para subir el sitio
+
+1. Subir el contenido de la carpeta `build` (NO la carpeta en sí, sino su contenido) al directorio público del servidor.
+2. Verificar que el servidor soporte Single Page Applications (SPA). Si no, asegurarse de redirigir las rutas internas al archivo `index.html`.
+3. Una vez subido, el sitio estará disponible en el subdominio configurado por el cliente.
+
+---
+
+⚠️ Importante
+
+- Este paquete no incluye el código fuente del proyecto (archivos `.jsx`, `.js`, `.css`, etc.).
+- Esta entrega habilita al cliente a utilizar el sitio tal como fue entregado.
+- Para realizar futuras modificaciones, mantenimiento o mejoras, se recomienda contactar al desarrollador.
+
+---
+
+📞 Contacto
+
+Desarrollador: Unqui Dev's  
+Email: [unquidev@gmail.com]
+WhatsApp: [2324469630]  
+Portafolio: [https://unquidev.com]
+
+---
