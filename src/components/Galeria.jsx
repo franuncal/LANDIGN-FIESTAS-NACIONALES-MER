@@ -1,14 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./Galeria.css";
 
 const Galeria = ({ imagenes, videos }) => {
   const [indexActual, setIndexActual] = useState(0);
+  const [videoActivo, setVideoActivo] = useState(null);
+  const videoRefs = useRef([]);
 
   useEffect(() => {
     const intervalo = setInterval(() => {
       setIndexActual((prevIndex) => (prevIndex + 1) % imagenes.length);
     }, 3000);
-
     return () => clearInterval(intervalo);
   }, [imagenes.length]);
 
@@ -20,6 +21,16 @@ const Galeria = ({ imagenes, videos }) => {
 
   const handleNext = () => {
     setIndexActual((prevIndex) => (prevIndex + 1) % imagenes.length);
+  };
+
+  const handlePlay = (index) => {
+    if (videoActivo !== null && videoRefs.current[videoActivo]) {
+      videoRefs.current[videoActivo].contentWindow.postMessage(
+        '{"event":"command","func":"pauseVideo","args":""}',
+        "*"
+      );
+    }
+    setVideoActivo(index);
   };
 
   return (
@@ -50,21 +61,42 @@ const Galeria = ({ imagenes, videos }) => {
           </button>
         </div>
 
-        {/* 🎬 Grid de videos */}
+        {/* 🎬 Reels para mobile/tablet */}
         {videos && videos.length > 0 && (
-          <div className="galeria-videos">
-            {videos.map((videoUrl, index) => (
-              <div key={index} className="video-item">
-                <iframe
-                  src={videoUrl}
-                  title={`Video ${index + 1}`}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  loading="lazy"
-                ></iframe>
-              </div>
-            ))}
-          </div>
+          <>
+            <div className="galeria-reels">
+              {videos.map((videoUrl, index) => (
+                <div key={index} className="reel-item">
+                  <iframe
+                    src={`${videoUrl}?enablejsapi=1`}
+                    ref={(el) => (videoRefs.current[index] = el)}
+                    title={`Video ${index + 1}`}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    loading="lazy"
+                    onClick={() => handlePlay(index)}
+                  ></iframe>
+                </div>
+              ))}
+            </div>
+
+            {/* 🎥 Grid en escritorio */}
+            <div className="galeria-videos-desktop">
+              {videos.map((videoUrl, index) => (
+                <div key={index} className="video-grid-item">
+                  <iframe
+                    src={`${videoUrl}?enablejsapi=1`}
+                    ref={(el) => (videoRefs.current[index] = el)}
+                    title={`Video ${index + 1}`}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    loading="lazy"
+                    onClick={() => handlePlay(index)}
+                  ></iframe>
+                </div>
+              ))}
+            </div>
+          </>
         )}
       </div>
     </section>
