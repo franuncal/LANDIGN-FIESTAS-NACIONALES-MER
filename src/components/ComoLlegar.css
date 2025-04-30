@@ -97,6 +97,7 @@
   background: white;
   padding: 1.5rem;
   border-radius: 1rem;
+  width: 100%;
   max-width: 95vw;
   max-height: 90vh;
   overflow-y: auto;
@@ -186,5 +187,19 @@
     aspect-ratio: 1 / 1;
     width: 100%;
     height: auto;
+  }
+}
+
+/* Desktop - Mejoramos tamaño del modal */
+@media (min-width: 1024px) {
+  .modal-pdf {
+    max-width: 1200px;
+    padding: 2rem;
+  }
+
+  .modal-pdf iframe {
+    aspect-ratio: 16 / 9;
+    height: auto;
+    min-height: 600px;
   }
 }
