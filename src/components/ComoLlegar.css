@@ -13,7 +13,7 @@
   font-size: 2rem;
   font-weight: bold;
   color: white;
-  background-color: #f29222;
+  background-color: #f18f22;
   display: inline-block;
   padding: 0.5rem 1.2rem;
   border-radius: 0.6rem;
@@ -23,7 +23,7 @@
 
 .resaltado {
   background-color: white;
-  color: #f29222;
+  color: #f18f22;
   padding: 0.2rem 0.6rem;
   border-radius: 0.3rem;
 }
@@ -62,12 +62,12 @@
 
 .transporte-icono {
   font-size: 2.8rem;
-  color: #f29222;
+  color: #f18f22;
   margin-bottom: 1rem;
 }
 
 .boton-ver-mas {
-  background-color: #0f526f;
+  background-color: #146689;
   color: white;
   border: none;
   padding: 0.5rem 1.2rem;
@@ -105,7 +105,7 @@
 }
 
 .modal-pdf h3 {
-  color: #f29222;
+  color: #f18f22;
   font-size: 1.4rem;
   margin-bottom: 1rem;
 }
@@ -122,7 +122,7 @@
 }
 
 .boton-cerrar:hover {
-  color: #f29222;
+  color: #f18f22;
 }
 
 .pdf-botones {
@@ -134,7 +134,7 @@
 }
 
 .boton-pdf {
-  background-color: #0f526f;
+  background-color: #146689;
   color: white;
   padding: 0.4rem 0.8rem;
   border-radius: 0.5rem;

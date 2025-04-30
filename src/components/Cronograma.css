@@ -7,14 +7,14 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
-  text-align: center; /* 🔥 AGREGAR ESTO */
+  text-align: center;
 }
 
 .cronograma-titulo {
   font-size: 1.8rem;
   font-weight: bold;
   color: white;
-  background-color: #f29222;
+  background-color: #f18f22;
   display: inline-block;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
@@ -25,30 +25,27 @@
 
 .cronograma-titulo .resaltado {
   background-color: white;
-  color: #f29222;
+  color: #f18f22;
   padding: 0.2rem 0.5rem;
   border-radius: 0.3rem;
 }
 
-/* Día */
 .cronograma-dia {
   margin-bottom: 2.5rem;
 }
 
 .cronograma-dia-titulo {
   color: white;
-  background-color: #f29222;
+  background-color: #f18f22;
   display: inline-block;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
   font-size: 1.6rem;
-
   margin-bottom: 1.5rem;
   text-align: center;
 }
 
-/* Lista de actividades */
 .cronograma-lista {
   display: grid;
   gap: 1.5rem;
@@ -63,12 +60,13 @@
 }
 
 .cronograma-item {
-  background-color: rgba(15, 82, 111);
+  background-color: #146689;
   padding: 1.3rem;
   border-radius: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
-  text-align: center; /* Mejor alineación en mobile */
+  text-align: center;
+  position: relative;
 }
 
 .cronograma-item:hover {
@@ -76,7 +74,7 @@
 }
 
 .cronograma-item-titulo {
-  font-size: 1.3rem; /* Más chico para mobile */
+  font-size: 1.3rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
   color: #f9fafb;
@@ -84,19 +82,43 @@
 
 .cronograma-item-descripcion {
   color: white;
-  font-size: 0.95rem; /* Más chico para mobile */
+  font-size: 0.95rem;
+  min-height: 4.5rem;
+  overflow: hidden;
 }
 
-/* Evento estelar */
+.cronograma-item.expandido .cronograma-item-descripcion {
+  min-height: auto;
+  overflow: visible;
+}
+
+.leer-mas-btn {
+  background-color: #f18f22;
+  color: white;
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  margin-top: 1rem;
+}
+
+.leer-mas-btn:hover {
+  background-color: #d97800;
+  transform: scale(1.05);
+}
+
+.leer-mas-btn:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
 .evento-estelar {
   text-align: center;
   margin-top: 4rem;
-  /* background-color: #f29222; */
-  background: linear-gradient(
-    90deg,
-    #0f526f,
-    #e67e22
-  ); /* Gradiente violeta a naranja */
+  background: linear-gradient(90deg, #0f526f, #e67e22);
   color: white;
   padding: 1.2rem 0.6rem;
   border-radius: 1rem;
@@ -122,20 +144,20 @@
 }
 
 .boton-entradas {
-  display: inline-flex; /* 🔥 inline-flex para alinear ícono y texto */
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: #f29222; /* Naranja */
+  background-color: #f18f22;
   color: white;
   font-size: 1.3rem;
   font-weight: bold;
   padding: 0.8rem 2rem;
   border-radius: 50px;
-  border: 1px solid #0f526f;
+  border: 1px solid #146689;
   text-decoration: none;
   transition: background-color 0.3s ease, transform 0.3s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  animation: pulse 2s infinite; /* 🔥 Botón pulsando */
+  animation: pulse 2s infinite;
 }
 
 .boton-entradas:hover {
@@ -147,10 +169,9 @@
   margin-right: 0.5rem;
   font-size: 1.8rem;
   vertical-align: middle;
-  animation: pulse-icon 2s infinite; /* 🔥 Ícono también pulsando */
+  animation: pulse-icon 2s infinite;
 }
 
-/* 🔥 Animación de pulse para el botón */
 @keyframes pulse {
   0% {
     transform: scale(1);
@@ -166,20 +187,18 @@
   }
 }
 
-/* 🔥 Animación de pulse para el ícono */
 @keyframes pulse-icon {
   0% {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.2); /* Ícono agranda y achica */
+    transform: scale(1.2);
   }
   100% {
     transform: scale(1);
   }
 }
 
-/* Ajustes extra para pantallas muy pequeñas */
 @media (max-width: 480px) {
   .cronograma-titulo {
     font-size: 1.5rem;

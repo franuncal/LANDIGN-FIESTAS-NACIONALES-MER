@@ -38,10 +38,10 @@ function App() {
   ];
 
   const videosGaleria = [
-    "https://www.youtube.com/embed/Vr7fx-V9AA0",
-    "https://www.youtube.com/embed/LG7oCNuy84E",
-    // "https://www.youtube.com/embed/Vr7fx-V9AA0",
-    // podés agregar más si querés
+    "https://www.youtube.com/embed/JCYcC7EvAEw",
+    "https://www.youtube.com/embed/Y5X15l_9knc",
+    "https://www.youtube.com/embed/ZAHVAhFbdcA",
+    "https://www.youtube.com/embed/U--yRGWbe_M",
   ];
 
   useEffect(() => {

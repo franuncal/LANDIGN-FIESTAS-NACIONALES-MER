@@ -1,5 +1,6 @@
 .footer {
-  background-color: #0f4860;
+  background-color: #146689;
+
   color: #cccccc;
   padding: 2rem 1rem;
 }
@@ -41,7 +42,7 @@
 }
 
 .footer-item a:hover {
-  color: #f29222;
+  color: #f18f22;
 }
 
 .footer-redes {
@@ -57,7 +58,7 @@
 }
 
 .footer-redes a:hover {
-  color: #f29222;
+  color: #f18f22;
 }
 
 .footer-logo {

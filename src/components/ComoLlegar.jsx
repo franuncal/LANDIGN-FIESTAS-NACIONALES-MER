@@ -127,6 +127,17 @@ const ComoLlegar = () => {
             loading="lazy"
           ></iframe>
         </div>
+        {/* 🔥 Link para comprar entradas */}
+        <div className="cronograma-entradas">
+          <a
+            href="https://mercedes.boleteriadigital.com.ar"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="boton-entradas"
+          >
+            <FaTicketAlt className="icono-ticket" /> Comprar Entradas
+          </a>
+        </div>
       </div>
     </section>
   );
