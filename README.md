@@ -5,9 +5,9 @@ Fecha de entrega: [30/04/2025]
 
 📁 Contenido del paquete
 
-Este paquete contiene la versión final y compilada del sitio web desarrollado con React para la "Fiesta de la Torta Frita". Los archivos están listos para ser subidos al servidor del cliente.
+Este paquete contiene la versión final y compilada del sitio web desarrollado con React para la "Fiesta de la Torta Frita". Los archivos están listos para ser subidos al servidor.
 
-- Carpeta: build/
+- Carpeta: dist/
 - Archivos estáticos optimizados para producción (HTML, CSS, JS, imágenes, etc.)
 - No se incluyen archivos fuente ni código editable
 
@@ -15,7 +15,7 @@ Este paquete contiene la versión final y compilada del sitio web desarrollado c
 
 🚀 Instrucciones para subir el sitio
 
-1. Subir el contenido de la carpeta `build` (NO la carpeta en sí, sino su contenido) al directorio público del servidor.
+1. Subir el contenido de la carpeta `dist` (NO la carpeta en sí, sino su contenido) al directorio público del servidor.
 2. Verificar que el servidor soporte Single Page Applications (SPA). Si no, asegurarse de redirigir las rutas internas al archivo `index.html`.
 3. Una vez subido, el sitio estará disponible en el subdominio configurado por el cliente.
 
@@ -31,9 +31,9 @@ Este paquete contiene la versión final y compilada del sitio web desarrollado c
 
 📞 Contacto
 
-Desarrollador: Unqui Dev's  
+Desarrollador: Francisco Uncal - Unqui Dev's  
 Email: [unquidev@gmail.com]
 WhatsApp: [2324469630]  
-Portafolio: [https://unquidev.com]
+Web: [https://unquidev.com]
 
 ---
