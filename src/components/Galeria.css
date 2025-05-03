@@ -103,6 +103,43 @@
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
+/* Instragram */
+.galeria-instagram {
+  margin-top: 3rem;
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+  text-align: center;
+  color: white;
+}
+
+.galeria-instagram-titulo {
+  /* font-size: 2.3rem; */
+  margin-bottom: 0.5rem;
+  /* font-weight: bold; */
+}
+
+.galeria-instagram-user {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #f0f0f0;
+}
+
+.galeria-instagram-boton {
+  display: inline-block;
+  background-color: #f18f22;
+  color: white;
+  cursor: pointer;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.galeria-instagram-boton:hover {
+  background-color: white;
+}
+
 /* 📱 Reels solo en mobile/tablet */
 @media (max-width: 768px) {
   .galeria-reels {

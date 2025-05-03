@@ -96,6 +96,25 @@ const Galeria = ({ imagenes, videos }) => {
                 </div>
               ))}
             </div>
+            <div className="galeria-instagram">
+              <h2 className="galeria-instagram-titulo">
+                Seguinos en Instagram
+              </h2>
+              <h2 className="galeria-instagram-titulo">
+                <span className="resaltado">
+                  y enterate de todas las novedades!
+                </span>
+              </h2>
+              <p className="galeria-instagram-user">@turismomercedesoficial</p>
+              <a
+                href="https://www.instagram.com/turismomercedesoficial"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="galeria-instagram-boton"
+              >
+                Seguinos
+              </a>
+            </div>
           </>
         )}
       </div>

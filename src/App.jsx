@@ -8,7 +8,7 @@ import ComoLlegar from "./components/ComoLlegar";
 import Hospedaje from "./components/Hospedaje";
 import Footer from "./components/Footer";
 // import WhatsappButton from "./components/WhatsappButton";
-import { obtenerEventoActivo } from "./utils/contadorUtils";
+// import { obtenerEventoActivo } from "./utils/contadorUtils";
 import eventosData from "./data/eventos.json";
 import hospedajesData from "./data/hospedajes.json";
 import noticiasData from "./data/noticias.json";
@@ -44,8 +44,13 @@ function App() {
     "https://www.youtube.com/embed/U--yRGWbe_M",
   ];
 
+  // useEffect(() => {
+  //   const evento = obtenerEventoActivo(eventosData);
+  //   setEventoActivo(evento);
+  // }, []);
+
   useEffect(() => {
-    const evento = obtenerEventoActivo(eventosData);
+    const evento = eventosData.find((evento) => evento.id === 1);
     setEventoActivo(evento);
   }, []);
 

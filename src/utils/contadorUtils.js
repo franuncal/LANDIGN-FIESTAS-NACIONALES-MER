@@ -1,8 +1,29 @@
-// src/utils/contadorUtils.js
+export const eventos = [
+  {
+    nombre: "Fiesta de la Torta Frita",
+    fecha: "2025-05-10T00:00:00",
+    rangoFechas: "10 y 11 de mayo",
+    banner: "../assets/img-TF/TF5.webp",
+  },
+  {
+    nombre: "Fiesta de la Torta Frita",
+    fecha: "2026-05-16T00:00:00",
+    rangoFechas: "16 y 17 de mayo",
+    banner: "../assets/img-TF/TF5.webp",
+  },
+];
 
-export function obtenerEventoActivo(eventos) {
+// Devuelve el próximo evento cuya fecha aún no ha pasado completamente
+export function obtenerEventoActivo() {
   const ahora = new Date();
-  return eventos.find((evento) => new Date(evento.fecha) > ahora);
+
+  // Buscar el primer evento cuya fecha sea futura
+  const proximoEvento = eventos.find(
+    (e) => new Date(e.fecha).getTime() > ahora.getTime()
+  );
+
+  // Si ya pasaron todos, devolvemos el último por defecto (fallback)
+  return proximoEvento || eventos[eventos.length - 1];
 }
 
 export function calcularTiempoRestante(fechaEvento) {
