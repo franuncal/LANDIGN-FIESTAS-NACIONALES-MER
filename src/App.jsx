@@ -44,11 +44,6 @@ function App() {
     "https://www.youtube.com/embed/U--yRGWbe_M",
   ];
 
-  // useEffect(() => {
-  //   const evento = obtenerEventoActivo(eventosData);
-  //   setEventoActivo(evento);
-  // }, []);
-
   useEffect(() => {
     const evento = eventosData.find((evento) => evento.id === 1);
     setEventoActivo(evento);
