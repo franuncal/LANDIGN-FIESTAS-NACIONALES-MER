@@ -2,38 +2,18 @@ import React, { useState } from "react";
 import "./Cronograma.css";
 import { FaTicketAlt } from "react-icons/fa";
 
-const Cronograma = ({ actividades }) => {
-  // 🔥 Agrupar actividades por fecha
-  const actividadesPorDia = actividades.reduce((acc, actividad) => {
-    const fecha = new Date(actividad.fecha);
-    const dia = fecha.toLocaleDateString("es-AR", {
-      weekday: "long",
-      day: "numeric",
-      month: "long",
-    });
-
-    if (!acc[dia]) {
-      acc[dia] = [];
-    }
-    acc[dia].push(actividad);
-    return acc;
-  }, {});
-
-  // Usamos ID único para cada actividad para evitar conflictos
+const Cronograma = ({ actividadesGenerales, cronogramaPorDia }) => {
+  const [diaSeleccionado, setDiaSeleccionado] = useState("10 de mayo");
   const [expandido, setExpandido] = useState({});
 
-  const toggleExpandido = (idx) => {
-    setExpandido((prev) => ({
-      ...prev,
-      [idx]: !prev[idx],
-    }));
+  const toggleExpandido = (id) => {
+    setExpandido((prev) => ({ ...prev, [id]: !prev[id] }));
   };
 
   const truncateDescription = (descripcion, maxLength = 80) => {
     if (descripcion.length <= maxLength) return descripcion;
 
     let truncado = descripcion.slice(0, maxLength);
-
     const ultimoEspacio = truncado.lastIndexOf(" ");
     if (ultimoEspacio > 0) {
       truncado = truncado.slice(0, ultimoEspacio);
@@ -43,60 +23,82 @@ const Cronograma = ({ actividades }) => {
   };
 
   return (
-    <section id="eventos" className="cronograma">
-      <div className="cronograma-contenedor">
-        <h2 className="cronograma-titulo">
-          Cronograma de <span className="resaltado">ACTIVIDADES</span>
-        </h2>
+    <section className="cronograma-section">
+      <h2 className="cronograma-title">
+        Cronograma de <span className="resaltado">Actividades</span>
+      </h2>
 
-        {Object.keys(actividadesPorDia).map((dia, index) => (
-          <div key={index} className="cronograma-dia">
-            <h3 className="cronograma-dia-titulo">{dia}</h3>
-            <ul className="cronograma-lista">
-              {actividadesPorDia[dia].map((actividad, idx) => (
-                <li
-                  key={idx}
-                  className={`cronograma-item ${
-                    expandido[actividad.nombre + idx] ? "expandido" : ""
-                  }`}
-                >
-                  <h4 className="cronograma-item-titulo">{actividad.nombre}</h4>
-                  <p className="cronograma-item-descripcion">
-                    {expandido[actividad.nombre + idx]
-                      ? actividad.descripcion
-                      : truncateDescription(actividad.descripcion, 120)}
-                  </p>
+      {/* ACTIVIDADES GENERALES */}
+      {actividadesGenerales?.length > 0 && (
+        <div className="actividades-generales">
+          {actividadesGenerales.map((actividad, index) => {
+            const id = actividad.nombre + index;
+            const estaExpandido = expandido[id];
+            const descripcion = estaExpandido
+              ? actividad.descripcion
+              : truncateDescription(actividad.descripcion, 80);
+
+            return (
+              <div key={id} className="actividad-card">
+                <h3>{actividad.nombre}</h3>
+                <p>{descripcion}</p>
+                {actividad.descripcion.length > 80 && (
                   <button
                     className="leer-mas-btn"
-                    onClick={() => toggleExpandido(actividad.nombre + idx)}
+                    onClick={() => toggleExpandido(id)}
                   >
-                    {expandido[actividad.nombre + idx]
-                      ? "Leer Menos"
-                      : "Leer Más"}
+                    {estaExpandido ? "Leer menos" : "Leer más"}
                   </button>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
-
-        <div className="evento-estelar">
-          <h3 className="evento-estelar-titulo">25 años haciendo</h3>
-          <p className="evento-estelar-descripcion">
-            ¡LA TORTA FRITA MAS GRANDE DEL MUNDO!
-          </p>
+                )}
+              </div>
+            );
+          })}
         </div>
+      )}
 
-        <div className="cronograma-entradas">
-          <a
-            href="https://mercedes.boleteriadigital.com.ar"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="boton-entradas"
-          >
-            <FaTicketAlt className="icono-ticket" /> Comprar Entradas
-          </a>
+      {/* BOTONES DE DÍAS */}
+      {cronogramaPorDia && (
+        <div className="cronograma-botones">
+          {Object.keys(cronogramaPorDia).map((dia) => (
+            <button
+              key={dia}
+              className={`boton-dia ${dia === diaSeleccionado ? "activo" : ""}`}
+              onClick={() => setDiaSeleccionado(dia)}
+            >
+              {dia}
+            </button>
+          ))}
         </div>
+      )}
+
+      {/* LISTADO DEL DÍA SELECCIONADO */}
+      {cronogramaPorDia?.[diaSeleccionado]?.length > 0 && (
+        <div className="cronograma-dia">
+          {cronogramaPorDia[diaSeleccionado].map((actividad, index) => (
+            <div key={index} className="actividad-dia">
+              <span role="img" aria-label="Fiesta"></span>
+              <p>{actividad}</p>
+            </div>
+          ))}
+        </div>
+      )}
+
+      <div className="evento-estelar">
+        <h3 className="evento-estelar-titulo">25 años haciendo</h3>
+        <p className="evento-estelar-descripcion">
+          ¡LA TORTA FRITA MAS GRANDE DEL MUNDO!
+        </p>
+      </div>
+
+      <div className="cronograma-entradas">
+        <a
+          href="https://mercedes.boleteriadigital.com.ar"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="boton-entradas"
+        >
+          <FaTicketAlt className="icono-ticket" /> Comprar Entradas
+        </a>
       </div>
     </section>
   );
