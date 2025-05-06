@@ -159,15 +159,26 @@
   margin-top: 0.5rem;
 }
 
-.evento-estelar-horario {
-  margin-top: 0.8rem;
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: #fff9dc;
-  background-color: rgba(255, 255, 255, 0.1);
-  display: inline-block;
-  padding: 0.4rem 1rem;
+.evento-estelar-amasado {
+  margin-top: 0.6rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  background-color: #e67e22;
+  color: #fff5e6;
+  padding: 0.6rem 1.4rem;
   border-radius: 20px;
+  display: inline-block;
+  text-shadow: 1px 1px 2px #0f526f;
+  box-shadow: 0 0 12px rgba(230, 126, 34, 0.4);
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.evento-estelar-amasado:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 18px rgba(230, 126, 34, 0.6);
+  background-color: #d46e1f; /* un tono apenas más oscuro al hacer hover */
 }
 
 /* === BOTÓN DE ENTRADAS === */
