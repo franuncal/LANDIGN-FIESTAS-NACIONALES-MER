@@ -15,13 +15,23 @@ const Header = () => {
   return (
     <header className="header">
       <div className="container">
-        <a href="#inicio" className="logo">
-          <img
-            src="../assets/Logos/logom1.png"
-            alt="Fiesta de la Torta Frita"
-            className="logo-imagen"
-          />
-        </a>
+        <div className="logo-contenedor">
+          <a href="#inicio" className="logo">
+            <img
+              src="../assets/Logos/logom1.png"
+              alt="Fiesta de la Torta Frita"
+              className="logo-imagen"
+            />
+          </a>
+          <a
+            href="https://turismo.mercedes.gob.ar/"
+            className="volver-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            ← Turismo Mercedes
+          </a>
+        </div>
 
         <nav className={`nav ${menuAbierto ? "activo" : ""}`}>
           <ul className="nav-list">
@@ -53,6 +63,16 @@ const Header = () => {
             <li>
               <a href="#contacto" onClick={cerrarMenu}>
                 Contacto
+              </a>
+            </li>
+            {/* Botón dentro del menú (mobile) */}
+            <li className="mobile-volver">
+              <a
+                href="https://turismo.mercedes.gob.ar/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                ← Turismo Mercedes
               </a>
             </li>
           </ul>

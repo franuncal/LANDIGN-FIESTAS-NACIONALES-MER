@@ -11,7 +11,7 @@
 
 .como-llegar-titulo {
   font-size: 2rem;
-  font-weight: bold;
+  /* font-weight: bold; */
   color: white;
   background-color: #f18f22;
   display: inline-block;

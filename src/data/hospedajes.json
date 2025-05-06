@@ -60,7 +60,7 @@
         "instagram": "https://www.instagram.com/campoeltizon/"
     },
     {
-        "nombre": "CASAS DE CAMPO LA SOLEDAD",
+        "nombre": "CASAS DE CAMPO LA SOLEADA",
         "descripcion": "Casas de campo para disfrutar Tomás Jofré.",
         "link": "https://maps.app.goo.gl/Fm4vsYg9imeiVxdc8",
         "instagram": "https://www.instagram.com/la_soledadjofre/?hl=es"
@@ -106,5 +106,11 @@
         "descripcion": "Cabañas ideales para una escapada rural.",
         "link": "https://maps.app.goo.gl/7mUTRQdyoX4vSXZq9",
         "instagram": "https://www.instagram.com/lasacacias2023"
+    },
+    {
+        "nombre": "CAMPING ALTOS DE JOFRE",
+        "descripcion": "Chacra de 5 hectáreas ubicada a 5 Km de Tomás Jofré.",
+        "link": "https://maps.app.goo.gl/hhZhUD1QtnDENke39",
+        "instagram": "https://www.instagram.com//altosdejofre.glamping"
     }
 ]

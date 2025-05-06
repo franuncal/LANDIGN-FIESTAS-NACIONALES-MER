@@ -5,7 +5,9 @@ const Noticias = ({ noticias }) => {
   return (
     <section id="noticias" className="seccion-noticias">
       <div className="contenedor">
-        <h2 className="titulo-seccion">Noticias</h2>
+        <h2 className="titulo-seccion">
+          <span className="resaltado">Noticias</span> del Evento
+        </h2>
 
         <div className="lista-noticias">
           {noticias.map((noticia, index) => (

@@ -88,6 +88,17 @@ const Footer = () => {
       <div className="footer-copy">
         © 2025 Municipalidad de Mercedes. Todos los derechos reservados.
       </div>
+
+      {/* Desarrollador */}
+      <div className="footer-desarrollador">
+        <a
+          href="https://unquidev.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          UNQUI
+        </a>
+      </div>
     </footer>
   );
 };

@@ -12,7 +12,7 @@
 .galeria-titulo {
   display: inline-block;
   font-size: 2.5rem;
-  font-weight: bold;
+  /* font-weight: bold; */
   margin: 0 auto 2.5rem auto;
   color: white;
   padding: 0 0.5rem;
