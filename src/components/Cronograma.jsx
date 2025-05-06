@@ -88,7 +88,17 @@ const Cronograma = ({ actividadesGenerales, cronogramaPorDia }) => {
         <p className="evento-estelar-descripcion">
           ¡LA TORTA FRITA MAS GRANDE DEL MUNDO!
         </p>
+        <p className="evento-estelar-horario">
+          🕒 Domingo 11 de mayo - 15:00 hs
+        </p>
       </div>
+
+      {/* <div className="evento-estelar">
+        <h3 className="evento-estelar-titulo">25 años haciendo</h3>
+        <p className="evento-estelar-descripcion">
+          ¡LA TORTA FRITA MAS GRANDE DEL MUNDO!
+        </p>
+      </div> */}
 
       <div className="cronograma-entradas">
         <a

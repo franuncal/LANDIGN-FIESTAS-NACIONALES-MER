@@ -159,6 +159,17 @@
   margin-top: 0.5rem;
 }
 
+.evento-estelar-horario {
+  margin-top: 0.8rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #fff9dc;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+}
+
 /* === BOTÓN DE ENTRADAS === */
 .cronograma-entradas {
   margin-top: 3rem;

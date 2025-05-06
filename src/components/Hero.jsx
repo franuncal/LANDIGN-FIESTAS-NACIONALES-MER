@@ -10,12 +10,25 @@ const Hero = () => {
   const [tiempoRestante, setTiempoRestante] = useState(
     calcularTiempoRestante(evento.fecha)
   );
+  const [modoFestejo, setModoFestejo] = useState(false);
 
   useEffect(() => {
     const intervalo = setInterval(() => {
+      const ahora = new Date();
       const eventoActual = obtenerEventoActivo();
       setEvento(eventoActual);
-      setTiempoRestante(calcularTiempoRestante(eventoActual.fecha));
+
+      // Definir rango de festejo (para el primer evento)
+      const inicioFestejo = new Date("2025-05-10T00:00:00");
+      const finFestejo = new Date("2025-05-12T00:00:00");
+
+      // Activar mensaje de festejo si estamos dentro del rango
+      if (ahora >= inicioFestejo && ahora < finFestejo) {
+        setModoFestejo(true);
+      } else {
+        setModoFestejo(false);
+        setTiempoRestante(calcularTiempoRestante(eventoActual.fecha));
+      }
     }, 1000);
 
     return () => clearInterval(intervalo);
@@ -41,36 +54,43 @@ const Hero = () => {
       </h3>
 
       <div className="hero-countdown">
-        <div className="countdown-content">
-          <span className="clock-icon">🕒</span>
-          <span className="faltan-text">Faltan</span>
-
-          <div className="time-section">
-            <span className="time-number">{tiempoRestante.dias}</span>
-            <span className="time-label">Días</span>
+        {modoFestejo ? (
+          <div className="festejo-mensaje">
+            🎉 ¡Ya estamos festejando la Fiesta de la Torta Frita! ¡Te
+            esperamos! 🎉
           </div>
+        ) : (
+          <div className="countdown-content">
+            <span className="clock-icon">🕒</span>
+            <span className="faltan-text">Faltan</span>
 
-          <div className="separator">|</div>
+            <div className="time-section">
+              <span className="time-number">{tiempoRestante.dias}</span>
+              <span className="time-label">Días</span>
+            </div>
 
-          <div className="time-section">
-            <span className="time-number">{tiempoRestante.horas}</span>
-            <span className="time-label">Horas</span>
+            <div className="separator">|</div>
+
+            <div className="time-section">
+              <span className="time-number">{tiempoRestante.horas}</span>
+              <span className="time-label">Horas</span>
+            </div>
+
+            <div className="separator">|</div>
+
+            <div className="time-section">
+              <span className="time-number">{tiempoRestante.minutos}</span>
+              <span className="time-label">Minutos</span>
+            </div>
+
+            <div className="separator">|</div>
+
+            <div className="time-section">
+              <span className="time-number">{tiempoRestante.segundos}</span>
+              <span className="time-label">Segundos</span>
+            </div>
           </div>
-
-          <div className="separator">|</div>
-
-          <div className="time-section">
-            <span className="time-number">{tiempoRestante.minutos}</span>
-            <span className="time-label">Minutos</span>
-          </div>
-
-          <div className="separator">|</div>
-
-          <div className="time-section">
-            <span className="time-number">{tiempoRestante.segundos}</span>
-            <span className="time-label">Segundos</span>
-          </div>
-        </div>
+        )}
       </div>
     </section>
   );

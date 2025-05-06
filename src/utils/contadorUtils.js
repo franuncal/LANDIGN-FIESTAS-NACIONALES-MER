@@ -17,12 +17,20 @@ export const eventos = [
 export function obtenerEventoActivo() {
   const ahora = new Date();
 
-  // Buscar el primer evento cuya fecha sea futura
+  const eventoActual = eventos[0]; // Evento de 2025
+  const inicioFestejo = new Date("2025-05-10T00:00:00");
+  const finFestejo = new Date("2025-05-12T00:00:00");
+
+  // Si estamos dentro del rango del festejo 2025, devolvemos ese evento
+  if (ahora >= inicioFestejo && ahora < finFestejo) {
+    return eventoActual;
+  }
+
+  // Si no, buscamos el primer evento futuro como antes
   const proximoEvento = eventos.find(
     (e) => new Date(e.fecha).getTime() > ahora.getTime()
   );
 
-  // Si ya pasaron todos, devolvemos el último por defecto (fallback)
   return proximoEvento || eventos[eventos.length - 1];
 }
 
