@@ -46,7 +46,7 @@ const Header = () => {
               </a>
             </li>
             <li>
-              <a href="#eventos" onClick={cerrarMenu}>
+              <a href="#cronograma" onClick={cerrarMenu}>
                 Actividades
               </a>
             </li>

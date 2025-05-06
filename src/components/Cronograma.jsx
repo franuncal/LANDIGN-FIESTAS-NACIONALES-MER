@@ -23,7 +23,7 @@ const Cronograma = ({ actividadesGenerales, cronogramaPorDia }) => {
   };
 
   return (
-    <section className="cronograma-section">
+    <section className="cronograma-section" id="cronograma">
       <h2 className="cronograma-title">
         Cronograma de <span className="resaltado">Actividades</span>
       </h2>
