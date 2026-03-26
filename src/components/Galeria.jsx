@@ -13,7 +13,7 @@ const Galeria = ({ imagenes }) => {
 
   const handlePrev = () => {
     setIndexActual(
-      (prevIndex) => (prevIndex - 1 + imagenes.length) % imagenes.length
+      (prevIndex) => (prevIndex - 1 + imagenes.length) % imagenes.length,
     );
   };
 
@@ -69,7 +69,11 @@ const Galeria = ({ imagenes }) => {
               onClick={() => setIndexActual(index)}
               aria-label={`Ir a imagen ${index + 1}`}
             >
-              <img src={img} alt={`Miniatura ${index + 1}`} className="thumb-img" />
+              <img
+                src={img}
+                alt={`Miniatura ${index + 1}`}
+                className="thumb-img"
+              />
             </button>
           ))}
         </div>
@@ -79,9 +83,9 @@ const Galeria = ({ imagenes }) => {
           <p className="galeria-instagram-copy">
             Enterate antes que nadie de artistas, horarios y novedades.
           </p>
-          <p className="galeria-instagram-user">@turismomercedesoficial</p>
+          <p className="galeria-instagram-user">@turismo_mercedes</p>
           <a
-            href="https://www.instagram.com/turismomercedesoficial"
+            href="https://www.instagram.com/turismo_mercedes/"
             target="_blank"
             rel="noopener noreferrer"
             className="galeria-instagram-boton"
