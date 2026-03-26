@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
-import { FaCar, FaTrain, FaBus, FaTicketAlt, FaTimes } from "react-icons/fa";
+import { FaTicketAlt, FaTimes } from "react-icons/fa";
+import { LuCar, LuTrainFront, LuBus, LuBusFront } from "react-icons/lu";
 import "./ComoLlegar.css";
 
 const ComoLlegar = () => {
@@ -49,58 +50,45 @@ const ComoLlegar = () => {
     return `/img/${nombre}`;
   };
 
+  const transportes = [
+    { key: "auto", label: "En auto", icon: LuCar, badge: "Ruta" },
+    { key: "tren", label: "En tren", icon: LuTrainFront, badge: "Sarmiento" },
+    { key: "colectivo", label: "En colectivo", icon: LuBus, badge: "Interurbanos" },
+    { key: "urbanos", label: "Urbanos", icon: LuBusFront, badge: "Locales" },
+  ];
+
   return (
     <section id="como-llegar" className="como-llegar">
       <div className="como-llegar-contenedor">
         <h2 className="como-llegar-titulo">
-          ¿Cómo <span className="resaltado">llegar?</span>
+          <span className="como-llegar-chip">Cómo llegar</span> a la Fiesta
         </h2>
 
         <p className="como-llegar-texto">
-          La Fiesta Nacional se realiza en el Parque Municipal Independencia de
-          la ciudad de Mercedes, Buenos Aires. ¡Te esperamos!
+          La Fiesta Nacional se realiza en el Parque Municipal Independencia de la
+          ciudad de Mercedes, Buenos Aires. Elegí tu medio de transporte y consultá
+          la info detallada.
         </p>
 
         <div className="transporte-opciones" ref={cardsRef}>
-          <div className="transporte-card">
-            <FaCar className="transporte-icono" />
-            <button
-              className="boton-ver-mas"
-              onClick={() => mostrarPDF("auto")}
-            >
-              En Auto
-            </button>
-          </div>
-
-          <div className="transporte-card">
-            <FaTrain className="transporte-icono" />
-            <button
-              className="boton-ver-mas"
-              onClick={() => mostrarPDF("tren")}
-            >
-              En Tren
-            </button>
-          </div>
-
-          <div className="transporte-card">
-            <FaBus className="transporte-icono" />
-            <button
-              className="boton-ver-mas"
-              onClick={() => mostrarPDF("colectivo")}
-            >
-              En Colectivo
-            </button>
-          </div>
-
-          <div className="transporte-card">
-            <FaBus className="transporte-icono" />
-            <button
-              className="boton-ver-mas"
-              onClick={() => mostrarPDF("urbanos")}
-            >
-              Urbanos
-            </button>
-          </div>
+          {transportes.map((transporte) => {
+            const Icon = transporte.icon;
+            return (
+              <div className="transporte-card" key={transporte.key}>
+                <span className="transporte-badge">{transporte.badge}</span>
+                <div className="transporte-icono-wrap">
+                  <Icon className="transporte-icono" />
+                </div>
+                <h3 className="transporte-titulo">{transporte.label}</h3>
+                <button
+                  className="boton-ver-mas"
+                  onClick={() => mostrarPDF(transporte.key)}
+                >
+                  Ver recorridos
+                </button>
+              </div>
+            );
+          })}
         </div>
 
         {pdfSeleccionado && (

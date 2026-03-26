@@ -1,59 +1,59 @@
 {
-    "id": 1,
-    "colorPrimario": "#146689",
-    "colorSecundario": "#F18F22",
-    "historia": {
-        "descripcion": "La Fiesta de la Torta Frita celebra la tradición culinaria de Mercedes con música en vivo, ferias de artesanos, actividades para toda la familia y, como gran atracción, LA PREPARACIÓN DE LA TORTA FRITA MÁS GRANDE DEL MUNDO. Un evento único donde vecinos y visitantes se reúnen para compartir costumbres, sabores y mucha alegría.",
-        "imagen": "../assets/img-TF/TF2.webp",
-        "video": "https://www.youtube.com/embed/Vr7fx-V9AA0",
-        "colorSecundario": "#146689"
+  "id": 1,
+  "colorPrimario": "#146689",
+  "colorSecundario": "#F18F22",
+  "historia": {
+    "descripcion": "La Fiesta de la Torta Frita celebra la tradición culinaria de Mercedes con música en vivo, ferias de artesanos, actividades para toda la familia y, como gran atracción, LA PREPARACIÓN DE LA TORTA FRITA MÁS GRANDE DEL MUNDO. Un evento único donde vecinos y visitantes se reúnen para compartir costumbres, sabores y mucha alegría.",
+    "imagen": "../assets/img-TF/TF2.webp",
+    "video": "https://www.youtube.com/embed/Vr7fx-V9AA0",
+    "colorSecundario": "#146689"
+  },
+  "actividadesGenerales": [
+    {
+      "nombre": "Apertura del Predio",
+      "descripcion": "La Fiesta Nacional de la Torta Frita se desarrolla en el Parque Municipal Independencia, un espacio de 54 hectáreas atravesado por el río Luján y que funciona no sólo como pulmón de la ciudad sino también como centro de encuentro y esparcimiento para vecinos de Mercedes y turistas. El Parque cuenta con instalaciones y comodidades para toda la familia, desde parrilleros hasta plazas de juegos, un lugar ideal para pasar el día. Es, claro, apto para mascotas. La apertura del predio para la Fiesta Nacional de la Torta Frita está prevista a las 10 de la mañana, tanto sábado como domingo, día en el que se elegirá a la mejor tortera de esta edición."
     },
-    "actividadesGenerales": [
-        {
-            "nombre": "Apertura del Predio",
-            "descripcion": "La Fiesta Nacional de la Torta Frita se desarrolla en el Parque Municipal Independencia, un espacio de 54 hectáreas atravesado por el río Luján y que funciona no sólo como pulmón de la ciudad sino también como centro de encuentro y esparcimiento para vecinos de Mercedes y turistas. El Parque cuenta con instalaciones y comodidades para toda la familia, desde parrilleros hasta plazas de juegos, un lugar ideal para pasar el día. Es, claro, apto para mascotas. La apertura del predio para la Fiesta Nacional de la Torta Frita está prevista a las 10 de la mañana, tanto sábado como domingo, día en el que se elegirá a la mejor tortera de esta edición."
-        },
-        {
-            "nombre": "Feria Artesanal",
-            "descripcion": "La organización de las distintas fiestas promueven el turismo de cercanía, generan movimiento y dinamizan la economía local, por eso son siempre una excelente oportunidad para generar trabajo a través de los distintos productores mercedinos. No sólo de gastronomía, sino también de distintas artesanías que llevan el sello de la ciudad y son ampliamente reconocidas por belleza y calidad. En esta oportunidad, además de los puestos de alimentos, estarán presentes las ferias de Tomás Jofré, del Centro Cultural La Trocha y de las diferentes plazas de la ciudad, además del Paseo Jacarandá de artesanías."
-        },
-        {
-            "nombre": "Cantinas Solidarias",
-            "descripcion": "Como sucede en cada una de las ediciones de la Fiesta Nacional de la Torta Frita, y se reproduce en todas las demás fiestas que suceden en Mercedes (Salame Quintero, Durazno, Galleta de Campo, Cerveza Artesanal, etcétera), se destinarán cantinas solidarias para distintas instituciones de nuestra ciudad: Bomberos Voluntarios, clubes, escuelas, ong’s. En el paseo de puestos, las instituciones se organizan para presentar distintos productos, desde parrilla hasta confituras de elaboración artesanal, que se complementan con la variada oferta gastronómica en la que, naturalmente, la estrella será nuestra exquisita torta frita."
-        },
-        {
-            "nombre": "Shows de Artistas Locales",
-            "descripcion": "El escenario de la 25ta edición de la Fiesta Nacional de la Torta Frita recibirá una nutrida grilla de artistas locales, reconocidos por su talento y creatividad artística. Desde hace varios años, a partir de la decisión de promover nuestra cultura y nuestro arte, las fiestas son ocasiones ideales para la presentación de bandas y solistas mercedinos en un escenario profesional y a la altura de sus necesidades. La grilla, además, se conforma como una expresión amplia de las variedades musicales entre las que habrá rock, cumbia, tango y folclore."
-        }
-    ],
-    "cronogramaPorDia": {
-        "10 de mayo": [
-            "RUBÉN LEÓN",
-            "ESCUELA DE TANGO Y FOLKLORE ALMAFUERTE",
-            "EMMA GRASSI",
-            "ESCUELA DE DANZAS AYEKAN",
-            "GRUPO SUYAI",
-            "HEREDEROS DE MI TIERRA",
-            "SEMILLA AGRESTE",
-            "BALLET AMANECER DE PUEBLO",
-            "BOHEMIOS",
-            "BALLET ARAMí",
-            "GUSTAVO GUZMAN",
-            "ESCUELA DE DANZAS FOLKLORICAS ARGENTINAS EL BAGUAL",
-            "CLAUDIO ROSA Y SU BANDA",
-            "MENTA Y LIMÓN"
-        ],
-        "11 de mayo": [
-            "DESFILE",
-            "CUERPO DE DANZA DESDE EL ALMA",
-            "SEBASTIAN GIOVANETONE",
-            "GRUPO FOLCLÓRICO “ALMAS DE MI PUEBLO”",
-            "COMPAÑÍA DE DANZA Y MALAMBO PASIÓN GAUCHA",
-            "ESCUELA MUNICIPAL DE FOLCLORE ESTRELLA DEL SUR",
-            "NUESTRA SEÑORA DE LAS MERCEDES Y TALLER DE ADULTOS MAYORES",
-            "LOS LÓPEZ HEREDIA",
-            "SANTA CECILIA",
-            "LA BESTIA FOLK"
-        ]
+    {
+      "nombre": "Feria Artesanal",
+      "descripcion": "La organización de las distintas fiestas promueven el turismo de cercanía, generan movimiento y dinamizan la economía local, por eso son siempre una excelente oportunidad para generar trabajo a través de los distintos productores mercedinos. No sólo de gastronomía, sino también de distintas artesanías que llevan el sello de la ciudad y son ampliamente reconocidas por belleza y calidad. En esta oportunidad, además de los puestos de alimentos, estarán presentes las ferias de Tomás Jofré, del Centro Cultural La Trocha y de las diferentes plazas de la ciudad, además del Paseo Jacarandá de artesanías."
+    },
+    {
+      "nombre": "Cantinas Solidarias",
+      "descripcion": "Como sucede en cada una de las ediciones de la Fiesta Nacional de la Torta Frita, y se reproduce en todas las demás fiestas que suceden en Mercedes (Salame Quintero, Durazno, Galleta de Campo, Cerveza Artesanal, etcétera), se destinarán cantinas solidarias para distintas instituciones de nuestra ciudad: Bomberos Voluntarios, clubes, escuelas, ong’s. En el paseo de puestos, las instituciones se organizan para presentar distintos productos, desde parrilla hasta confituras de elaboración artesanal, que se complementan con la variada oferta gastronómica en la que, naturalmente, la estrella será nuestra exquisita torta frita."
+    },
+    {
+      "nombre": "Shows de Artistas Locales",
+      "descripcion": "El escenario de la 25ta edición de la Fiesta Nacional de la Torta Frita recibirá una nutrida grilla de artistas locales, reconocidos por su talento y creatividad artística. Desde hace varios años, a partir de la decisión de promover nuestra cultura y nuestro arte, las fiestas son ocasiones ideales para la presentación de bandas y solistas mercedinos en un escenario profesional y a la altura de sus necesidades. La grilla, además, se conforma como una expresión amplia de las variedades musicales entre las que habrá rock, cumbia, tango y folclore."
     }
+  ],
+  "cronogramaPorDia": {
+    "11 de abril": [
+      "RUBÉN LEÓN",
+      "ESCUELA DE TANGO Y FOLKLORE ALMAFUERTE",
+      "EMMA GRASSI",
+      "ESCUELA DE DANZAS AYEKAN",
+      "GRUPO SUYAI",
+      "HEREDEROS DE MI TIERRA",
+      "SEMILLA AGRESTE",
+      "BALLET AMANECER DE PUEBLO",
+      "BOHEMIOS",
+      "BALLET ARAMí",
+      "GUSTAVO GUZMAN",
+      "ESCUELA DE DANZAS FOLKLORICAS ARGENTINAS EL BAGUAL",
+      "CLAUDIO ROSA Y SU BANDA",
+      "MENTA Y LIMÓN"
+    ],
+    "12 de abril": [
+      "DESFILE",
+      "CUERPO DE DANZA DESDE EL ALMA",
+      "SEBASTIAN GIOVANETONE",
+      "GRUPO FOLCLÓRICO “ALMAS DE MI PUEBLO”",
+      "COMPAÑÍA DE DANZA Y MALAMBO PASIÓN GAUCHA",
+      "ESCUELA MUNICIPAL DE FOLCLORE ESTRELLA DEL SUR",
+      "NUESTRA SEÑORA DE LAS MERCEDES Y TALLER DE ADULTOS MAYORES",
+      "LOS LÓPEZ HEREDIA",
+      "SANTA CECILIA",
+      "LA BESTIA FOLK"
+    ]
+  }
 }

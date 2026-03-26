@@ -11,6 +11,36 @@ html {
   scroll-behavior: smooth;
 }
 
+:root {
+  --color-primario: #0f3a5a;
+  --color-primario-soft: #1f5f88;
+  --color-secundario: #e59a2f;
+  --color-secundario-soft: #f3b14a;
+  --color-fondo: #f4f8fb;
+  --color-fondo-alt: #eaf2f8;
+  --color-texto: #193348;
+  --color-texto-soft: #3b566c;
+}
+
+body {
+  background: radial-gradient(
+    circle at top left,
+    var(--color-fondo-alt) 0%,
+    #ffffff 38%,
+    var(--color-fondo) 100%
+  );
+  color: var(--color-texto);
+  min-height: 100vh;
+}
+
+main>section {
+  margin-bottom: 1.5rem;
+}
+
+main > section#hero {
+  margin-bottom: 0;
+}
+
 /* ----------------------------------- */
 /* Cargar Tipografías Klavika           */
 /* ----------------------------------- */
@@ -78,7 +108,7 @@ body {
   font-weight: 400;
   line-height: 1.6;
   background-color: #ffffff;
-  color: #333333;
+  color: var(--color-texto);
 }
 
 /* ----------------------------------- */
@@ -94,23 +124,24 @@ h5,
 h6,
 span {
   font-family: "Klavika", sans-serif;
-  font-weight: 400; /* Bold */
+  font-weight: 400;
+  /* Bold */
   margin-bottom: 1rem;
   line-height: 1.2;
 }
 
 /* Título Principal */
 h1 {
-  font-size: 2.5rem;
+  font-size: 2.9rem;
 }
 
 /* Subtítulos */
 h2 {
-  font-size: 2rem;
+  font-size: 2.35rem;
 }
 
 h3 {
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 
 /* Textos generales */
@@ -118,8 +149,9 @@ p,
 li,
 a {
   font-family: "Klavika", sans-serif;
-  font-weight: 400; /* Regular */
-  font-size: 1rem;
+  font-weight: 400;
+  /* Regular */
+  font-size: 1.08rem;
   /* color: #4a5568;  */
 }
 
@@ -130,7 +162,7 @@ a {
 }
 
 a:hover {
-  color: #f29222; /* Naranja en hover */
+  color: var(--color-secundario);
 }
 
 /* Listas */
@@ -167,20 +199,20 @@ select {
 /* ----------------------------------- */
 @media (max-width: 768px) {
   h1 {
-    font-size: 2.5rem;
+    font-size: 2.7rem;
   }
 
   h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   h3 {
-    font-size: 1.5rem;
+    font-size: 1.72rem;
   }
 
   p,
   li,
   a {
-    font-size: 0.95rem;
+    font-size: 1.02rem;
   }
 }

@@ -1,89 +1,77 @@
 import React, { useState, useEffect } from "react";
-import {
-  calcularTiempoRestante,
-  obtenerEventoActivo,
-} from "../utils/contadorUtils";
+import { FaRegClock } from "react-icons/fa6";
+import { calcularTiempoRestante } from "../utils/contadorUtils";
 import "./Hero.css";
 
-const Hero = () => {
-  const [evento, setEvento] = useState(obtenerEventoActivo());
+const Hero = ({ evento }) => {
+  const [eventoActivo, setEventoActivo] = useState(evento || null);
   const [tiempoRestante, setTiempoRestante] = useState(
-    calcularTiempoRestante(evento.fecha)
+    evento
+      ? calcularTiempoRestante(evento.fecha)
+      : { dias: 0, horas: 0, minutos: 0, segundos: 0 },
   );
   const [modoFestejo, setModoFestejo] = useState(false);
 
   useEffect(() => {
-    const intervalo = setInterval(() => {
+    if (!evento) return;
+
+    setEventoActivo(evento);
+    setTiempoRestante(calcularTiempoRestante(evento.fecha));
+
+    const id = setInterval(() => {
       const ahora = new Date();
-      const eventoActual = obtenerEventoActivo();
-      setEvento(eventoActual);
+      const fechaEvento = new Date(evento.fecha);
+      const finFestejo = new Date(fechaEvento);
+      finFestejo.setDate(finFestejo.getDate() + 2);
 
-      // Definir rango de festejo (para el primer evento)
-      const inicioFestejo = new Date("2025-05-10T00:00:00");
-      const finFestejo = new Date("2025-05-12T00:00:00");
-
-      // Activar mensaje de festejo si estamos dentro del rango
-      if (ahora >= inicioFestejo && ahora < finFestejo) {
+      if (ahora >= fechaEvento && ahora < finFestejo) {
         setModoFestejo(true);
+        setTiempoRestante({ dias: 0, horas: 0, minutos: 0, segundos: 0 });
       } else {
         setModoFestejo(false);
-        setTiempoRestante(calcularTiempoRestante(eventoActual.fecha));
+        setTiempoRestante(calcularTiempoRestante(evento.fecha));
       }
     }, 1000);
 
-    return () => clearInterval(intervalo);
-  }, []);
+    return () => clearInterval(id);
+  }, [evento]);
 
-  return (
-    <section
-      className="hero"
-      id="hero"
-      style={{
-        backgroundImage: `url(${evento.banner})`,
-      }}
-    >
-      <h2 className="hero-subtitle">25° Aniversario</h2>
-      <h1 className="hero-title">{evento.nombre}</h1>
+  if (!eventoActivo) return null;
 
-      <h3 className="hero-date">
-        {evento.rangoFechas ||
-          new Date(evento.fecha).toLocaleDateString("es-AR", {
-            day: "numeric",
-            month: "long",
-          })}
-      </h3>
-
+  const renderCountdownAndActions = () => (
+    <>
       <div className="hero-countdown">
         {modoFestejo ? (
           <div className="festejo-mensaje">
-            🎉 ¡Ya estamos festejando la Fiesta de la Torta Frita! ¡Te
-            esperamos! 🎉
+            🎉 ¡Ya estamos festejando! Vení al evento más esperado 🎉
           </div>
         ) : (
-          <div className="countdown-content">
-            <span className="clock-icon">🕒</span>
-            <span className="faltan-text">Faltan</span>
+          <div className="countdown-content" aria-live="polite">
+            <div className="countdown-heading">
+              <FaRegClock className="countdown-icon" aria-hidden="true" />
+              <span className="countdown-intro">Faltan</span>
+            </div>
 
             <div className="time-section">
               <span className="time-number">{tiempoRestante.dias}</span>
               <span className="time-label">Días</span>
             </div>
 
-            <div className="separator">|</div>
+            <div className="separator">:</div>
 
             <div className="time-section">
               <span className="time-number">{tiempoRestante.horas}</span>
               <span className="time-label">Horas</span>
             </div>
 
-            <div className="separator">|</div>
+            <div className="separator">:</div>
 
             <div className="time-section">
               <span className="time-number">{tiempoRestante.minutos}</span>
               <span className="time-label">Minutos</span>
             </div>
 
-            <div className="separator">|</div>
+            <div className="separator">:</div>
 
             <div className="time-section">
               <span className="time-number">{tiempoRestante.segundos}</span>
@@ -92,7 +80,58 @@ const Hero = () => {
           </div>
         )}
       </div>
-    </section>
+
+      <div className="hero-actions">
+        <a
+          className="hero-action-btn"
+          href="https://mercedes.boleteriadigital.com.ar"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Comprar Entradas
+        </a>
+        <a
+          className="hero-action-btn"
+          href="https://turismo.mercedes.gob.ar/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Turismo Web
+        </a>
+        <a
+          className="hero-action-btn"
+          href="https://www.instagram.com/turismo_mercedes/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Novedades
+        </a>
+        <a className="hero-action-btn" href="#como-llegar">
+          Cómo llegar
+        </a>
+      </div>
+    </>
+  );
+
+  return (
+    <>
+      <section className="hero" id="hero">
+        <div className="hero-content">
+          <div className="hero-panel hero-panel-cta">
+            {renderCountdownAndActions()}
+          </div>
+        </div>
+      </section>
+
+      <section
+        className="hero-mobile-cta"
+        aria-label="Cuenta regresiva y accesos"
+      >
+        <div className="hero-mobile-cta-inner">
+          {renderCountdownAndActions()}
+        </div>
+      </section>
+    </>
   );
 };
 

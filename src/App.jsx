@@ -1,17 +1,12 @@
 import React, { useEffect, useState } from "react";
-import Header from "./components/Header";
 import Hero from "./components/Hero";
-import Historia from "./components/Historia";
-import Cronograma from "./components/Cronograma";
+import VideoDestacado from "./components/VideoDestacado";
 import Galeria from "./components/Galeria";
 import ComoLlegar from "./components/ComoLlegar";
-import Hospedaje from "./components/Hospedaje";
 import Footer from "./components/Footer";
-import Noticias from "./components/Noticias";
 
+import { obtenerEventoActivo } from "./utils/contadorUtils";
 import eventosData from "./data/eventos.json";
-import hospedajesData from "./data/hospedajes.json";
-import noticiasData from "./data/noticias.json";
 
 function App() {
   const [eventoActivo, setEventoActivo] = useState(null);
@@ -36,15 +31,10 @@ function App() {
     "/assets/img-TF/TF17.webp",
   ];
 
-  const videosGaleria = [
-    "https://www.youtube.com/embed/JCYcC7EvAEw",
-    "https://www.youtube.com/embed/Y5X15l_9knc",
-    "https://www.youtube.com/embed/ZAHVAhFbdcA",
-    "https://www.youtube.com/embed/U--yRGWbe_M",
-  ];
-
   useEffect(() => {
-    setEventoActivo(eventosData);
+    const eventoOferta = obtenerEventoActivo();
+    // combinamos contenido de la data local con el evento activo para tener imagen + historia
+    setEventoActivo({ ...eventosData, ...eventoOferta });
   }, []);
 
   if (!eventoActivo)
@@ -55,19 +45,12 @@ function App() {
     );
 
   return (
-    <div>
-      <Header evento={eventoActivo} />
+    <div className="app">
       <main>
         <Hero evento={eventoActivo} />
-        <Historia historia={eventoActivo.historia} />
-        <Cronograma
-          actividadesGenerales={eventoActivo.actividadesGenerales}
-          cronogramaPorDia={eventoActivo.cronogramaPorDia}
-        />
-        <Galeria imagenes={imagenesGaleria} videos={videosGaleria} />
-        <Noticias noticias={noticiasData} />
+        <VideoDestacado />
+        <Galeria imagenes={imagenesGaleria} />
         <ComoLlegar />
-        <Hospedaje hospedajes={hospedajesData} />
       </main>
       <Footer />
     </div>

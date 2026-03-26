@@ -1,10 +1,8 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import "./Galeria.css";
 
-const Galeria = ({ imagenes, videos }) => {
+const Galeria = ({ imagenes }) => {
   const [indexActual, setIndexActual] = useState(0);
-  const [videoActivo, setVideoActivo] = useState(null);
-  const videoRefs = useRef([]);
 
   useEffect(() => {
     const intervalo = setInterval(() => {
@@ -23,100 +21,74 @@ const Galeria = ({ imagenes, videos }) => {
     setIndexActual((prevIndex) => (prevIndex + 1) % imagenes.length);
   };
 
-  const handlePlay = (index) => {
-    if (videoActivo !== null && videoRefs.current[videoActivo]) {
-      videoRefs.current[videoActivo].contentWindow.postMessage(
-        '{"event":"command","func":"pauseVideo","args":""}',
-        "*"
-      );
-    }
-    setVideoActivo(index);
-  };
-
   return (
     <section id="galeria" className="galeria">
       <div className="galeria-contenedor">
         <h2 className="galeria-titulo">
           <span className="resaltado">Reviví</span> ediciones anteriores
         </h2>
+        <p className="galeria-subtitulo">
+          Un recorrido por los mejores momentos de la Fiesta Nacional de la
+          Torta Frita.
+        </p>
 
-        {/* 🖼 Carrusel de imágenes */}
         <div className="galeria-imagen-contenedor">
           <img
             src={imagenes[indexActual]}
             alt={`Imagen ${indexActual + 1}`}
             className="galeria-imagen"
           />
+          <div className="galeria-imagen-overlay"></div>
           <button
             onClick={handlePrev}
             className="galeria-boton galeria-boton-izq"
+            aria-label="Imagen anterior"
           >
-            ◀
+            ‹
           </button>
           <button
             onClick={handleNext}
             className="galeria-boton galeria-boton-der"
+            aria-label="Imagen siguiente"
           >
-            ▶
+            ›
           </button>
+
+          <div className="galeria-indicador">
+            {String(indexActual + 1).padStart(2, "0")} /{" "}
+            {String(imagenes.length).padStart(2, "0")}
+          </div>
         </div>
 
-        {/* 🎬 Reels para mobile/tablet */}
-        {videos && videos.length > 0 && (
-          <>
-            <div className="galeria-reels">
-              {videos.map((videoUrl, index) => (
-                <div key={index} className="reel-item">
-                  <iframe
-                    src={`${videoUrl}?enablejsapi=1`}
-                    ref={(el) => (videoRefs.current[index] = el)}
-                    title={`Video ${index + 1}`}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    loading="lazy"
-                    onClick={() => handlePlay(index)}
-                  ></iframe>
-                </div>
-              ))}
-            </div>
+        <div className="galeria-thumbs">
+          {imagenes.slice(0, 8).map((img, index) => (
+            <button
+              key={img}
+              type="button"
+              className={`thumb-btn ${indexActual === index ? "is-active" : ""}`}
+              onClick={() => setIndexActual(index)}
+              aria-label={`Ir a imagen ${index + 1}`}
+            >
+              <img src={img} alt={`Miniatura ${index + 1}`} className="thumb-img" />
+            </button>
+          ))}
+        </div>
 
-            {/* 🎥 Grid en escritorio */}
-            <div className="galeria-videos-desktop">
-              {videos.map((videoUrl, index) => (
-                <div key={index} className="video-grid-item">
-                  <iframe
-                    src={`${videoUrl}?enablejsapi=1`}
-                    ref={(el) => (videoRefs.current[index] = el)}
-                    title={`Video ${index + 1}`}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    loading="lazy"
-                    onClick={() => handlePlay(index)}
-                  ></iframe>
-                </div>
-              ))}
-            </div>
-            <div className="galeria-instagram">
-              <h2 className="galeria-instagram-titulo">
-                Seguinos en Instagram
-              </h2>
-              <h2 className="galeria-instagram-titulo">
-                <span className="resaltado">
-                  y enterate de todas las novedades!
-                </span>
-              </h2>
-              <p className="galeria-instagram-user">@turismomercedesoficial</p>
-              <a
-                href="https://www.instagram.com/turismomercedesoficial"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="galeria-instagram-boton"
-              >
-                Seguinos
-              </a>
-            </div>
-          </>
-        )}
+        <div className="galeria-instagram">
+          <h2 className="galeria-instagram-titulo">Seguinos en Instagram</h2>
+          <p className="galeria-instagram-copy">
+            Enterate antes que nadie de artistas, horarios y novedades.
+          </p>
+          <p className="galeria-instagram-user">@turismomercedesoficial</p>
+          <a
+            href="https://www.instagram.com/turismomercedesoficial"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="galeria-instagram-boton"
+          >
+            Seguinos
+          </a>
+        </div>
       </div>
     </section>
   );
