@@ -1,0 +1,108 @@
+.programacion {
+  padding: clamp(2.5rem, 5vw, 4.5rem) 1rem;
+}
+
+.programacion--info {
+  background: #ffffff;
+}
+
+.programacion--grilla {
+  background: linear-gradient(180deg, #f0f7fc 0%, #e6f1f8 100%);
+}
+
+.programacion-inner {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+/* Header */
+.programacion-header {
+  text-align: center;
+  margin-bottom: clamp(1.8rem, 3.5vw, 3rem);
+}
+
+.programacion-title {
+  margin: 0 0 0.45rem;
+  font-size: clamp(1.9rem, 3.6vw, 3rem);
+  line-height: 1.18;
+  color: #123149;
+}
+
+.programacion-chip {
+  display: inline-block;
+  margin-right: 0.35rem;
+  padding: 0.02rem 0.48rem;
+  border-radius: 0.28rem;
+  background: #1f5f88;
+  color: #ffffff;
+}
+
+.programacion-subtitle {
+  margin: 0.45rem auto 0;
+  max-width: 52ch;
+  font-size: clamp(1.05rem, 1.55vw, 1.26rem);
+  color: #3d5a70;
+  line-height: 1.55;
+}
+
+/* Grid 3 columnas */
+.programacion-grid--3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1rem, 2.5vw, 1.8rem);
+  align-items: start;
+}
+
+/* Grid 2 columnas centrado */
+.programacion-grid--2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 400px));
+  gap: clamp(1rem, 2.5vw, 1.8rem);
+  align-items: start;
+  justify-content: center;
+}
+
+/* Tarjeta */
+.programacion-card {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 28px rgba(15, 61, 95, 0.13);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.programacion-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(15, 61, 95, 0.22);
+}
+
+.programacion-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Tablet */
+@media (max-width: 860px) {
+  .programacion-grid--3,
+  .programacion-grid--2 {
+    gap: 0.75rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 580px) {
+  .programacion {
+    padding: 2rem 0.75rem;
+  }
+
+  .programacion-grid--3,
+  .programacion-grid--2 {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  .programacion-card:hover {
+    transform: none;
+  }
+}

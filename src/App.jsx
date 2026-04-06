@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Hero from "./components/Hero";
+import Programacion from "./components/Programacion";
 import VideoDestacado from "./components/VideoDestacado";
 import Galeria from "./components/Galeria";
 import ComoLlegar from "./components/ComoLlegar";
@@ -48,6 +49,7 @@ function App() {
     <div className="app">
       <main>
         <Hero evento={eventoActivo} />
+        <Programacion />
         <VideoDestacado />
         <Galeria imagenes={imagenesGaleria} />
         <ComoLlegar />
